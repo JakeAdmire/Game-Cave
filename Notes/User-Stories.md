@@ -4,23 +4,31 @@
 Welcome,
   - User should see a welcome popup on their first time visiting the site
 ```
+### Header
 ```
-Fixed Header Navigation,
-  - User should be prompted with the option to select their personal game library
-```
-```
-Displays,
-  - All game titles in database
-  - Scroll to see more
+My Library,
+  - User should be able to select their personal game library
 ```
 ```
-Fixed Footer Navigation,
-  - User should be prompted to input search limiters before clicking "Search"
-  - User should be able to press a "Genre Info" button to be taken to a page with information about all game genres
+Full Selection,
+  - User should be able to select the full game selection, rather than their personal selection
+```
+### Shelves
+```
+Game shelf,
+  - User should be able to see a display of all game titles in database
+  - User should be able to scroll through the page to see more game cards
+  - User should be able to click on each game to create a popup with more information
 ```
 ```
-I'm feeling lucky,
-  - User should be able to click an "I'm feeling lucky" button to generate a completely random game suggestion
+Game Info,
+  - A popup should display all available informationa about a selected game
+  - User should be able to click each genre displayed in game information for more info about it
+```
+### Footer
+```
+Footer,
+  - User should be prompted to input search limiters
 ```
 ```
 Multiplayer,
@@ -31,5 +39,12 @@ Multiplayer,
 Genre,
   - User should be able to select one or more genres
   - User should not be able to select the "Couch Co-op" genre if they selected "false" for the "Multiplayer" option
-  - User should be able to click on each genre for more information
+```
+```
+Generate Suggestion,
+  - User should be able to click a search button that generates a random game within their search parameters
+```
+```
+I'm feeling lucky,
+  - User should be able to click an "I'm feeling lucky" button to generate a COMPLETELY random game suggestion
 ```
