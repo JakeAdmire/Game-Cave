@@ -1,20 +1,19 @@
 # Game-Shelf
-
-## Welcome Page
+## User-Stories
 ```
-  - Display instructions for navigating app
+Welcome,
+  - User should see a welcome popup on their first time visiting the site
 ```
-## Main Page
+```
+Fixed Header Navigation,
+  - User should be prompted with the option to select their personal game library
+```
 ```
 Displays,
   - All game titles in database
   - Scroll to see more
 ```
 ```
-Fixed Header Navigation,
-  - User should be prompted with the option to select their personal game library
- ```
- ```
 Fixed Footer Navigation,
   - User should be prompted to input search limiters before clicking "Search"
   - User should be able to press a "Genre Info" button to be taken to a page with information about all game genres
@@ -32,8 +31,5 @@ Multiplayer,
 Genre,
   - User should be able to select one or more genres
   - User should not be able to select the "Couch Co-op" genre if they selected "false" for the "Multiplayer" option
-```
-```
-Genre descriptions,
-  - How do we want to display the genre information?
+  - User should be able to click on each genre for more information
 ```
