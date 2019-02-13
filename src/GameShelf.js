@@ -4,7 +4,7 @@ import './GameShelf.css';
 
 export default function Gameshelf(props) {
   return(
-    <div className= 'Gameshelf'>
+    <div class= 'game-shelf'>
       <h1>GameShelf</h1>
       <GameCard/>
     </div>
