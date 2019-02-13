@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
+import Header from './Header.js';
+import GameShelf from './GameShelf.js';
+import Footer from './Footer.js';
 import './App.css';
 
 class App extends Component {
   constructor () {
-    this.state = {
-
-    }
+    super();
+    this.state = { value: 0 }
   }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-          </p>
-        </header>
+      <div>
+        <Header />
+        <GameShelf />
+        <Footer />
       </div>
     );
   }
