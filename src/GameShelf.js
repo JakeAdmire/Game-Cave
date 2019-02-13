@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Gamecard from './GameCard';
 import './GameShelf.css';
 
