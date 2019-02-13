@@ -2,17 +2,19 @@ import React, { Component } from 'react';
 import './GenreBar.css'
 
 
-export default class GenreBar extends Component{
-  constructor (props) {
-    super (props);
-    this.state = {
+export default class GenreBar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+        }
     }
-  }
-  render () {
-    return (
-      <form>
+    render() {
+        return (
+            <div class='genre-bar'>
+                <form>
 
-      </form>
-    )
-  }
+                </form>
+            </div>
+        )
+    }
 }
