@@ -9,7 +9,7 @@ export default class ConsoleBar extends Component {
   }
   render() {
     return(
-      <div>
+      <div class="console-bar">
         <div class="burger">
           <div class="ingredient"></div>
           <div class="ingredient"></div>
