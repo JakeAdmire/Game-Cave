@@ -3,9 +3,9 @@ import 'LuckyBar.css';
 
 export default function LuckyBar() {
   return(
-    <div class="lucky-bar">
-      <button onClick={/**/}>Generate Suggestion</button>
-      <button onClick={/**/}>Get Lucky</button>
+    <div className="lucky-bar">
+      <button className="random-all" onClick={/**/}>Random from All</button>
+      <button className="random-filter" onClick={/**/}>Random from Filters</button>
     </div>
   )
 }

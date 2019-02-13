@@ -5,19 +5,17 @@ import 'ConsoleBar.css';
 export default class ConsoleBar extends Component {
   constructor() {
     super();
-    this.state = { checkedItems: [] };
+    this.state = { selectedConsoles: [] };
+  }
+  updateConsoles = () => {
+
   }
   render() {
     return(
-      <div class="console-bar">
-        <div class="burger">
-          <div class="ingredient"></div>
-          <div class="ingredient"></div>
-          <div class="ingredient"></div>
-        </div>
-        <div>
-          {/*Checkboxes for consoles*/}
-        </div>
+      <div className="console-bar">
+        <form onChange={this.updateConsoles} className="console-check">
+          {/* <CheckBox props={props}/> */}
+        </form>
       </div>
     )
   }
