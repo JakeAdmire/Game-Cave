@@ -14,9 +14,11 @@ export default class SearchBar extends Component {
   }
   render() {
     return (
-      <form>
-        <button onClick={this.handleToggle}> MULTIPLAYER</button>
-      </form>
+      <div class="multi-bar">
+        <form>
+          <button onClick={this.handleToggle}> MULTIPLAYER</button>
+        </form>
+      </div>
     )
   }
 }
