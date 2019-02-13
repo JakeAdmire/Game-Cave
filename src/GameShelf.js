@@ -10,7 +10,7 @@ export default function Gameshelf(props) {
         props.gamecard.filter((gamecard, index) => {
           console.log("In Gamecard");
           return(
-            <gamecard />
+            <Gamecard  gamecard= {gamecard}/>
           )
         })
       }
