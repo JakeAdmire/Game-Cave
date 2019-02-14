@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import 'ConsoleBar.css';
+import './ConsoleBar.css';
 
 // Requires 'state' to keep track of consoles the user selects?
 export default class ConsoleBar extends Component {
