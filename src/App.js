@@ -114,7 +114,7 @@ class App extends Component {
  
   render() {
     console.log("platforms", this.state.platforms);
-    console.log("genre", this.state.genre);
+    console.log("genre", this.state.genres);
     return (
       <div className="app">
         <Header />
