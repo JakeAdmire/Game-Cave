@@ -1,0 +1,47 @@
+.game-card {
+  display: grid;
+  grid-template-areas: 
+  "img title btn";
+  grid-template-columns: 100px 168px;
+  grid-auto-rows: 140px;
+  padding: 5px;
+  margin: auto;
+  height: 130px;
+  width: 300px;
+  background-color: rgba(80, 80, 80, .8);
+  border-radius: 20px;
+}
+
+.img {
+  grid-area: img;
+  display: flex;
+  padding: 0 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.gamecover {
+  height: 110px;
+}
+
+.text-container {
+  display: flex;
+  align-items: center;
+  grid-area: title;
+  word-wrap: break-word;
+}
+
+.btn {
+  grid-area: btn;
+  padding: -10px;
+}
+
+
+button {
+  font-size: 25px;
+  height: 100%;
+  color: white;
+  background-color: rgba(80, 80, 80, .8);
+  border-left: 5px solid white;
+  border-radius: 0 20px 20px 0;
+}

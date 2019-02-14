@@ -8,11 +8,11 @@
 }
 
 .card-container {
-  /* margin: 50px; */
-  padding: 60px 30px 30px 30px;
+  padding: 60px 20px 30px 60px;
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 60px 10px;
+  /* grid-template-rows: auto; */
+  grid-template-columns: repeat(auto-fit, 350px); 
   grid-auto-rows: max-content;
   background-color: rgba(4,4,44,.65);
   color: white;
