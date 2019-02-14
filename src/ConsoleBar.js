@@ -19,7 +19,7 @@ export default class ConsoleBar extends Component {
   render() {
     return(
       <div className="console-bar search-section">
-        <button className="console-button"></button>
+        <button className="button">PLATFORM</button>
       </div>
     )
   }

@@ -1,6 +1,6 @@
 .lucky-bar {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  height: 90%;
+  /*justify-content: space-around;*/
+  height: 100%;
 }
