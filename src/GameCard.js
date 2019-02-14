@@ -9,7 +9,8 @@ export default class GameCard extends Component {
   render() {
     return(
       <div class="game-card">
-        <h4>Game Title</h4>   
+        <h4>Game Title</h4>
+        <p>lorem ipsum blah this blah that, here we go. all over again </p>  
       </div>
     )
   }

@@ -14,7 +14,7 @@ export default class SearchBar extends Component {
   }
   render() {
     return (
-      <div class="multi-bar">
+      <div className="multi-bar">
         <form>
           <button onClick={this.handleToggle}> MULTIPLAYER</button>
         </form>

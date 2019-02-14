@@ -4,17 +4,18 @@ import './GameShelf.css';
 
 export default function Gameshelf(props) {
   return(
-    <div class= 'game-shelf'>
-      <h1>GameShelf</h1>
-      <GameCard/>
+    <div className= 'game-shelf'>
+      <article className='card-container'>
+      {
+        props.games.map((game, index) => {
+          console.log("In Gamecard");
+          console.log(game)
+          return(
+            <GameCard  game= {game}/>
+          )
+        })
+      }
+      </article> 
     </div>
   )
 }
-      // {
-      //   props.gamecard.filter((gamecard, index) => {
-      //     console.log("In Gamecard");
-      //     return(
-      //       <Gamecard  gamecard= {gamecard}/>
-      //     )
-      //   })
-      // }

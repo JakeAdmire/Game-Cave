@@ -16,7 +16,7 @@ export default class SearchBar extends Component {
   }
   render() {
     return(
-      <div class="search-bar">
+      <div className="search-bar">
         <form>
           <input onChange={SOMETHING}/>
         </form>
