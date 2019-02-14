@@ -1,43 +1,62 @@
 .game-card {
-  display: flex;
-  justify-content: space-between;
-  margin: auto;
-  height: 130px;
-  width: 300px;
   background-color: rgba(80, 80, 80, .8);
   border-radius: 20px;
+  display: flex;
+  height: 130px;
+  justify-content: space-between;
+  margin: auto;
+  width: 300px;
+  box-shadow: 3px 2px 3px black, 3.5px 3.2px 3.5px #613941;
+}
+
+.game-card:hover {
+  box-shadow: 3px 2px 3px black, 4px 4px 4px rgb(206, 99, 255);
 }
 
 .img {
-  display: flex;
-  padding: 0 10px;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
 }
 
 .gamecover {
+  border-radius: 10px;
   height: 110px;
   width: 80px;
-  border-radius: 10px;
 }
 
 .text-container {
-  display: flex;
-  align-content: center;
+  /* display: flex; */
+  /* align-content: center; */
+  width: 100%;
   word-wrap: break-word;
+  letter-spacing: 1.2px;
+  text-shadow: 3px 2px 3px black;
+  /* font-family: 'Righteous', cursive; */
+  font-family: 'Audiowide', cursive;
 }
 
 .add-to-library {
+  background-color: rgba(80, 80, 80, .8);
+  border-left: 5px solid white;
+  border-radius: 0 20px 20px 0;
+  border: none;
   box-sizing: border-box;
+  color: white;
   font-size: 25px;
   height: 100%;
-  color: white;
-  background-color: rgba(80, 80, 80, .8);
-  /*border-left: 5px solid white;*/
-  border: none;
-  border-radius: 0 20px 20px 0;
 }
 
 button:focus {
   outline: none;
+}
+
+button:hover {
+  background-color: rgb(206, 99, 255);
+  /* rgb(108, 52, 97) */
+}
+
+.active-btn {
+  background-color: rgb(206, 99, 255);
 }

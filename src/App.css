@@ -1,5 +1,5 @@
 html { height: 100%; }
-body { height: 100%; background: black }
+body { height: 100%; background: black; }
 #root { height: 100%; }
 
 .app {
@@ -10,4 +10,9 @@ body { height: 100%; background: black }
   /*background: hsl(240, 25%, 35%);*/
   background: url("./imgs/helmet.gif");
   background-size: cover;
+}
+
+input,
+button {
+  font-family: 'Audiowide', cursive;
 }

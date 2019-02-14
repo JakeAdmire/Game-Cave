@@ -10,6 +10,9 @@
 }
 
 .title {
+  font-family: 'Audiowide', cursive;
   font-size: 60px;
-  color: white;
+  background: -webkit-linear-gradient(#19196f , rgb(162, 68, 87));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
