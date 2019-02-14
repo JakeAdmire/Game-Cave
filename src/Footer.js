@@ -4,6 +4,8 @@ import ConsoleBar from './ConsoleBar'
 import LuckyBar from './LuckyBar'
 import SearchBar from './SearchBar'
 import MultiBar from './MultiBar'
+import './button.css';
+
 import './Footer.css'
 
 export default function Footer(props) {
