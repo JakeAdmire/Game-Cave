@@ -83,10 +83,10 @@ class App extends Component {
     super();
     this.state = { 
       value: 0,
-      genre: [],
+      genres: [],
       platforms: [],
-      filteredGenres: [],
-      filteredConsoles: [],
+      genresToFilter: [],
+      platformsToFilter: [],
       multiplayer: [null, true, false]
      }
   }
@@ -108,8 +108,11 @@ class App extends Component {
       })
     })
     this.setState({platforms: filters})
-    this.setState({genre: filtersTwo})
+    this.setState({genres: filtersTwo})
                   
+  }
+  updateState = (newState) => {
+    this.setState(newState);
   }
  
   render() {
@@ -120,7 +123,8 @@ class App extends Component {
         <Header />
         <GameShelf 
           games={gameCardArr}/>
-        <Footer />
+        <Footer {...this.state}
+                updateState={this.updateState}/>
       </div>
     );
   }
