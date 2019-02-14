@@ -1,0 +1,39 @@
+.search-form {
+  position: fixed;
+  bottom: 25px;
+}
+
+.search {
+  width: 100%;
+  height: 50px;
+  background: none;
+  /**/
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 2px grey;
+  /**/
+  color: white;
+  font-size: 30px;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.search::placeholder {
+  color: #234987;
+  transition: all .2s ease;
+}
+
+.search:focus::placeholder {
+  color: hsla(0, 0%, 0%, 0)
+}
+
+.clear-search {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  font-size: 30px;
+  color: #234987;
+}
