@@ -18,7 +18,7 @@ export default class SearchBar extends Component {
     return(
       <div className="search-bar search-section">
         <form className="search-form">
-          <input placeholder="Search a game title!" className="search" onChange={this.handleChange}/>
+          <input maxLength="25" placeholder="Search a game title!" className="search" onChange={this.handleChange}/>
           <div className="clear-search">
             <div className="left-line"></div>
             <div className="right-line"></div>

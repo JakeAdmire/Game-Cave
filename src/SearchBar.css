@@ -5,9 +5,11 @@
 }
 
 .search {
+  box-sizing: border-box;
   width: 100%;
-  height: 98px;
-  /*background: none;*/
+  padding: 20px;
+  height: 100px;
+  background: rgba(80, 103, 144, 0.4);
   border: none;
   color: white;
   font-size: 30px;
@@ -18,7 +20,7 @@
 }
 
 .search::placeholder {
-  color: #234987;
+  color: #506790;
   transition: all .2s ease;
 }
 
