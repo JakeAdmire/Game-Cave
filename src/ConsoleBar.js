@@ -5,15 +5,21 @@ import './ConsoleBar.css';
 export default class ConsoleBar extends Component {
   constructor() {
     super();
-    this.state = { selectedConsoles: [] };
+    this.state = { platformsToFilter: [] };
   }
-  updateConsoles = () => {
-
-  }
+  updatePlatforms = () => {
+    let checked = []
+    const checkboxes = document.querySelectorAll('.platformCheckBox:checked')
+    checkboxes.forEach((elem) => {
+        array.push(elem.value)
+    })
+    this.setState({platformsToFilter: checked});
+    // this.props.dataUP
+    }
   render() {
     return(
       <div className="console-bar">
-        <form onChange={this.updateConsoles} className="console-check">
+        <form onChange={this.updatePlatforms} className="console-check">
           {/* <CheckBox props={props}/> */}
         </form>
       </div>
