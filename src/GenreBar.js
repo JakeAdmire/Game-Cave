@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CheckBox from './CheckBox.js';
 import './GenreBar.css'
 
 
@@ -11,7 +12,7 @@ export default class GenreBar extends Component {
     let checked = []
     const checkboxes = document.querySelectorAll('.genreCheckBox:checked')
     checkboxes.forEach((elem) => {
-        array.push(elem.value)
+        checked.push(elem.value)
     })
     this.setState({genresToFilter: checked});
     // this.props.dataUP
@@ -20,7 +21,7 @@ export default class GenreBar extends Component {
         return (
             <div className="genre-bar search-section">
                 <form onChange={this.updateGenres} className="genre-check">
-                    <CheckBox props={props}/>
+                    {/*<CheckBox props={props}/>*/}
                 </form>
             </div>
         )
