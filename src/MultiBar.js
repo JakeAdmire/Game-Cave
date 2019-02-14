@@ -5,7 +5,7 @@ export default class SearchBar extends Component {
   constructor() {
     super()
     this.state = {
-      MULTIPLAYER: FALSE
+      MULTIPLAYER: false
     }
   }
   handleToggle = event => {

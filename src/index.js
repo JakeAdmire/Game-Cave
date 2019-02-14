@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
-import './imgs/cyberfunk.gif';
+import './imgs/notAvail.png'
+import './imgs/bench.gif';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

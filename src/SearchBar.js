@@ -9,7 +9,7 @@ export default class SearchBar extends Component {
     }
   }
   handleChange = event => {
-    this.setState({SOMETHING: SOMETHING})
+    this.setState({SOMETHING: 0})
   }
   searchTitles() {
 
@@ -18,7 +18,7 @@ export default class SearchBar extends Component {
     return(
       <div className="search-bar">
         <form>
-          <input onChange={SOMETHING}/>
+          <input onChange={this.handleChange}/>
         </form>
       </div>
     )
