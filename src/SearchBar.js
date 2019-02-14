@@ -17,8 +17,9 @@ export default class SearchBar extends Component {
   render() {
     return(
       <div className="search-bar search-section">
-        <form>
-          <input onChange={this.handleChange}/>
+        <form className="search-form">
+          <input placeholder="Search a game title!" className="search" onChange={this.handleChange}/>
+          <div className="clear-search">x</div>
         </form>
       </div>
     )
