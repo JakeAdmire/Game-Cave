@@ -57,11 +57,40 @@ const gameCardArr = [
 class App extends Component {
   constructor () {
     super();
-    this.state = { value: 0,
+    this.state = { 
+      value: 0,
+      genre: [],
+      platforms: [],
+      filteredGenres: [],
+      filteredConsoles: [],
+      multiplayer: [null, true, false]
      }
   }
+  componentWillMount(){
+    let filters = [];
+    let filtersTwo = [];
+    gameCardArr.forEach(game => {
+      game.platforms.forEach(val => {
+        if (!filters.includes(val)){
+          filters.push(val)
+        }
+      })
+    })
+    gameCardArr.forEach(game => {
+      game.genre.forEach(val => {
+        if (!filtersTwo.includes(val)){
+          filtersTwo.push(val)
+        }
+      })
+    })
+    this.setState({platforms: filters})
+    this.setState({genre: filtersTwo})
+                  
+  }
+ 
   render() {
-    console.log(gameCardArr);
+    console.log("platforms", this.state.platforms);
+    console.log("genre", this.state.genre);
     return (
       <div className="app">
         <Header />
