@@ -11,7 +11,7 @@ export default function Gameshelf(props) {
           console.log("In Gamecard");
           console.log(game)
           return(
-            <GameCard  game= {game}/>
+            <GameCard {...game}/>
           )
         })
       }

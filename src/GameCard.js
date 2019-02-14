@@ -2,15 +2,22 @@ import React, { Component } from 'react';
 import './GameCard.css';
 
 export default class GameCard extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = { expanded: false };
   }
   render() {
     return(
       <div class="game-card">
-        <h4>Game Title</h4>
-        <p>lorem ipsum blah this blah that, here we go. all over again </p>  
+        <section className="img">
+          <img className="gamecover" src={this.props.img} />
+        </section>
+        <section className="text-container">
+          <h4>{this.props.name}</h4>
+        </section>
+        <section className="btn">
+          <button> + </button>
+        </section>
       </div>
     )
   }
