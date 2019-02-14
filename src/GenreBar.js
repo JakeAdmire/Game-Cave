@@ -8,11 +8,14 @@ export default class GenreBar extends Component {
         this.state = {
         }
     }
+    updateGenres = () => {
+
+    }
     render() {
         return (
-            <div class='genre-bar'>
-                <form>
-
+            <div className='genre-bar'>
+                <form onChange={this.updateGenres} className="genre-check">
+                    {/* <CheckBox props={props}/> */}
                 </form>
             </div>
         )
