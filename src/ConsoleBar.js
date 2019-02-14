@@ -18,10 +18,8 @@ export default class ConsoleBar extends Component {
     }
   render() {
     return(
-      <div className="console-bar">
-        <form onChange={this.updatePlatforms} className="console-check">
-          {/* <CheckBox props={props}/> */}
-        </form>
+      <div className="console-bar search-section">
+        <button className="console-button"></button>
       </div>
     )
   }

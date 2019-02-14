@@ -1,10 +1,6 @@
 .game-card {
-  display: grid;
-  grid-template-areas: 
-  "img title btn";
-  grid-template-columns: 100px 168px;
-  grid-auto-rows: 140px;
-  padding: 5px;
+  display: flex;
+  justify-content: space-between;
   margin: auto;
   height: 130px;
   width: 300px;
@@ -13,7 +9,6 @@
 }
 
 .img {
-  grid-area: img;
   display: flex;
   padding: 0 10px;
   justify-content: center;
@@ -22,26 +17,27 @@
 
 .gamecover {
   height: 110px;
+  width: 80px;
+  border-radius: 10px;
 }
 
 .text-container {
   display: flex;
-  align-items: center;
-  grid-area: title;
+  align-content: center;
   word-wrap: break-word;
 }
 
-.btn {
-  grid-area: btn;
-  padding: -10px;
-}
-
-
-button {
+.add-to-library {
+  box-sizing: border-box;
   font-size: 25px;
   height: 100%;
   color: white;
   background-color: rgba(80, 80, 80, .8);
-  border-left: 5px solid white;
+  /*border-left: 5px solid white;*/
+  border: none;
   border-radius: 0 20px 20px 0;
+}
+
+button:focus {
+  outline: none;
 }

@@ -4,6 +4,30 @@ import GameShelf from './GameShelf.js';
 import Footer from './Footer.js';
 import './App.css';
 
+
+// componentDidMount( ) {
+//   fetch('http://whateverly-datasets.herokuapp.com/api/v1/games1811')
+//     .then(response => response.JSON())
+//     .then(games => {
+//       this.setState({
+//         games: games.result
+//       })
+//     })
+//     .catch(error => {
+//       throw new Error(error)
+//     })
+//     fetch('http://whateverly-datasets.herokuapp.com/api/v1/genres1811')
+//     .then(response => response.JSON())
+//     .then(genres => {
+//       this.setState({
+//         genres: genres.result
+//       })
+//     })
+//     .catch(error => {
+//       throw new Error(error)
+//     })
+// }
+
 const gameCardArr = [
   {
     "name": "The Last of Us",
