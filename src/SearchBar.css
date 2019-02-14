@@ -1,18 +1,14 @@
 .search-form {
   position: fixed;
-  bottom: 25px;
+  bottom: 0;
+  width: 20%;
 }
 
 .search {
   width: 100%;
-  height: 50px;
-  background: none;
-  /**/
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: solid 2px grey;
-  /**/
+  height: 98px;
+  /*background: none;*/
+  border: none;
   color: white;
   font-size: 30px;
 }
@@ -31,9 +27,20 @@
 }
 
 .clear-search {
+  width: 20px;
+  height: 20px;
   position: absolute;
   right: 5px;
-  top: 10px;
-  font-size: 30px;
-  color: #234987;
+  top: 40px;
 }
+
+.left-line,
+.right-line {
+  position: absolute;
+  background: #506790;
+  width: 5px;
+  height: 20px;
+}
+
+.left-line { transform: rotate(45deg); }
+.right-line { transform: rotate(-45deg); }
