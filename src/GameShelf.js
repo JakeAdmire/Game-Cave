@@ -8,8 +8,6 @@ export default function Gameshelf(props) {
       <article className='card-container'>
       {
         props.games.map((game, index) => {
-          console.log("In Gamecard");
-          console.log(game)
           return(
             <GameCard {...game}/>
           )

@@ -6,7 +6,7 @@ import SearchBar from './SearchBar'
 import MultiBar from './MultiBar'
 import './Footer.css'
 
-export default function Footer() {
+export default function Footer(props) {
     return (
         <div className='footer'>
             <SearchBar />

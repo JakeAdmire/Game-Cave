@@ -10,7 +10,6 @@ export default class SearchBar extends Component {
   }
   handleToggle = event => {
     event.preventDefault();
-    this.props.DOSOMETHING(this.state.SOMETHING);
   }
   render() {
     return (
