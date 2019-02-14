@@ -12,7 +12,7 @@ export default function Footer(props) {
     return (
         <div className='footer'>
             <SearchBar />
-            <ConsoleBar {...props}/>
+            <PlatformBar {...props}/>
             <GenreBar {...props} />
             <MultiBar />
             <LuckyBar />
