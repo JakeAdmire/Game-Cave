@@ -25,6 +25,7 @@ class App extends Component {
           games: games.games1811
         })
       })
+      .then(() => this.getFilters())
       .catch(error => {
         throw new Error(error)
       })

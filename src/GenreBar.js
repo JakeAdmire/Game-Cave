@@ -22,7 +22,7 @@ export default class GenreBar extends Component {
             <div className="genre-bar search-section">
                 <form onChange={this.updateGenres} className="genre-check">
                 {
-                    this.props.platforms.map((val, i) => {
+                    this.props.genres.map((val, i) => {
                         return <CheckBox {...this.props}
                                          genre={val}
                                          class="genre-check-box"
