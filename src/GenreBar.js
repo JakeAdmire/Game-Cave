@@ -24,7 +24,9 @@ export default class GenreBar extends Component {
                 {
                     this.props.platforms.map((val, i) => {
                         return <CheckBox {...this.props}
-                        />
+                                         genre={val}
+                                         class="genre-check-box"
+                                         key={i}/>
                     })
                 }
                 </form>
