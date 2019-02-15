@@ -2,7 +2,6 @@ import React from 'react';
 import './LuckyBar.css';
 
 export default function LuckyBar(props) {
-  console.log(props)
   return(
     <div className="lucky-bar search-section">
       <button className="button lucky random-all" onClick={props.filter}>Random from All</button>

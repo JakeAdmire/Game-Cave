@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import GameCard from './GameCard';
 import './GameShelf.css';
 
-export default function Gameshelf(props) {
+export default class GameShelf extends Component {
+  constructor (props) {
+    super (props);
+    this.state = {
+    }
+  } 
+
+  render () {
+    let filteredGames = this.props.filteredGames
   return(
-    <div className= 'game-shelf'>
+    <div className='game-shelf'>
       <article className='card-container'>
       {
-        props.games.map((game, index) => {
+
+      
+        filteredGames.map((game, index) => {
           return(
             <GameCard {...game}/>
           )
@@ -16,4 +26,5 @@ export default function Gameshelf(props) {
       </article> 
     </div>
   )
+}
 }

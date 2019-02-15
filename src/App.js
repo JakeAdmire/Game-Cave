@@ -12,7 +12,7 @@ class App extends Component {
       mainGenres: [],
       genres: [],
       platforms: [],
-      titleToFilter: "",
+      titleToFilter: "bill",
       genresToFilter: [],
       platformsToFilter: [],
       filteredGames: [],
@@ -24,7 +24,8 @@ class App extends Component {
       .then(response => response.json())
       .then(games => {
         this.setState({
-          games: games.games1811
+          games: games.games1811,
+          filteredGames: games.games1811
         })
       })
       .then(() => this.getFilters())
@@ -72,12 +73,10 @@ class App extends Component {
   }
  
   render() {
-    console.log(this.state.genres)
     return (
       <div className="app">
         <Header />
-        <GameShelf 
-          games={this.state.games}/>
+        <GameShelf {...this.state}/>
         <Footer {...this.state}
                 updateState={this.updateState}/>
       </div>
