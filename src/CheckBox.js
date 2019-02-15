@@ -3,7 +3,7 @@ import React from 'react';
 export default function Footer (props) {
     return (
         <div>
-        <input type="checkbox" class={props.class} id={`genre${props.key}`}/><label for={`genre${props.key}`}>{props.genre}</label>
+        <input type="checkbox" className={props.class} id={`${props.class}${props.key}`}/><label htmlFor={`${props.class}${props.key}`}>{props.name}</label>
         </div>
     )
 }

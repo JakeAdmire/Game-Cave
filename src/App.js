@@ -12,8 +12,10 @@ class App extends Component {
       mainGenres: [],
       genres: [],
       platforms: [],
+      titleToFilter: "",
       genresToFilter: [],
       platformsToFilter: [],
+      filteredGames: [],
       multiplayer: [null, true, false]
      }
   }
@@ -46,7 +48,6 @@ class App extends Component {
     let filtersTwo = [];
     this.state.games.forEach(game => {
       game.platforms.forEach(val => {
-        console.log("in filter1")
         if (!filters.includes(val)){
           filters.push(val)
         }
@@ -66,11 +67,12 @@ class App extends Component {
   updateState = (newState) => {
     this.setState(newState);
   }
+  filterGames = () => {
+
+  }
  
   render() {
-    console.log("games", this.state.games);
-    console.log("plat", this.state.platforms);
-    console.log("genre", this.state.genres);
+    console.log(this.state.genres)
     return (
       <div className="app">
         <Header />

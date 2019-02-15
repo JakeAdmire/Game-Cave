@@ -2,17 +2,16 @@ import React, {Component} from 'react';
 import './SearchBar.css';
 
 export default class SearchBar extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
-
+      text: ''
     }
   }
   handleChange = event => {
-    this.setState({SOMETHING: 0})
-  }
-  searchTitles() {
-
+    console.log(event.target.value)
+    this.setState({text: event.target.value})
+    this.props.updateState({titleToFilter: this.state.text})
   }
   render() {
     return(
