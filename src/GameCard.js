@@ -7,16 +7,19 @@ export default class GameCard extends Component {
     this.state = { expanded: false };
   }
   render() {
+    let inLibraryStatus = " + "
+    const style = { backgroundImage: 'url(' + this.props.img + ')', backgroundSize: 'cover' };
     return(
       <div className="game-card">
         <section className="img">
-          <img className="gamecover" src={this.props.img} alt="not avail" />
+          <div className="gamecover" style={style}></div>
+          {/*<img className="gamecover" src={this.props.img} alt="not avail" />*/}
         </section>
         <section className="text-container">
           <h4>{this.props.name}</h4>
         </section>
         <section className="btn">
-          <button className="add-to-library"> + </button>
+          <button className="add-to-library"> {inLibraryStatus} </button>
         </section>
       </div>
     )

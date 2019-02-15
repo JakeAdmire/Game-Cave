@@ -2,7 +2,7 @@
   background-color: rgba(80, 80, 80, .8);
   border-radius: 20px;
   display: flex;
-  height: 130px;
+  height: 90px;
   justify-content: space-between;
   margin: auto;
   width: 300px;
@@ -17,24 +17,27 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  padding: 0 10px;
+  padding: 0 5px;
 }
 
 .gamecover {
-  border-radius: 10px;
+  border-radius: 15px;
   height: 110px;
   width: 80px;
+  height: 80px;
 }
 
 .text-container {
-  /* display: flex; */
-  /* align-content: center; */
   width: 100%;
   word-wrap: break-word;
   letter-spacing: 1.2px;
   text-shadow: 3px 2px 3px black;
   /* font-family: 'Righteous', cursive; */
   font-family: 'Audiowide', cursive;
+}
+
+.text-container h4 {
+  margin: 5px;
 }
 
 .add-to-library {
@@ -46,6 +49,7 @@
   color: white;
   font-size: 25px;
   height: 100%;
+  width: 45px;
 }
 
 button:focus {
@@ -54,7 +58,6 @@ button:focus {
 
 button:hover {
   background-color: rgb(206, 99, 255);
-  /* rgb(108, 52, 97) */
 }
 
 .active-btn {
