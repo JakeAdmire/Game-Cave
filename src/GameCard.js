@@ -13,7 +13,7 @@ export default class GameCard extends Component {
           <img className="gamecover" src={this.props.img} alt="not avail" />
         </section>
         <section className="text-container">
-          <h4>{this.props.name}</h4>
+          <h4>{this.props.title}</h4>
         </section>
         <section className="btn">
           <button className="add-to-library"> + </button>
