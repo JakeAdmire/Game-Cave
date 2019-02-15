@@ -16,9 +16,10 @@ export default class GameCard extends Component {
         </section>
         <section className="text-container">
           <h4>{this.props.name}</h4>
+          <p>More Info..</p>
         </section>
         <section className="btn">
-          <button className="add-to-library"> {inLibraryStatus} </button>
+          <button className="add-to-library">{inLibraryStatus}</button>
         </section>
       </div>
     )

@@ -35,10 +35,23 @@
   letter-spacing: 1.2px;
   /*text-shadow: 0px 2px 3px black;*/
   font-family: 'Audiowide', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .text-container h4 {
   margin: 5px;
+}
+
+.text-container p {
+  margin: 0 0 0 50px;
+  color: #1a1d22;
+}
+
+.text-container p:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .add-to-library {
@@ -54,14 +67,20 @@
   transition: all .2s ease;
 }
 
-.add-to-libary:focus {
+.add-to-library:focus {
   outline: none;
 }
 
 .add-to-library:hover {
   background-color: rgb(206, 99, 255);
+  cursor: pointer;
 }
 
 .active-btn {
   background-color: rgb(206, 99, 255);
+}
+
+.add-to-library:active,
+.text-container p:active {
+  opacity: 0.5;
 }
