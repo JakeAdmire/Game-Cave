@@ -8,18 +8,16 @@ export default class GameShelf extends Component {
     this.state = {
     }
   } 
-
   render () {
     let filteredGames = this.props.filteredGames
   return(
     <div className='game-shelf'>
       <article className='card-container'>
       {
-
-      
         filteredGames.map((game, index) => {
           return(
-            <GameCard {...game}/>
+            <GameCard {...game}
+                      key={game.title}/>
           )
         })
       }

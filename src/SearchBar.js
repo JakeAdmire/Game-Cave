@@ -4,19 +4,15 @@ import './SearchBar.css';
 export default class SearchBar extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-    }
+    this.state = {}
   }
   handleChange = event => {
     let searchText = event.target.value.toLowerCase()
     this.props.updateState({filteredGames: this.filterGames(searchText)})
   }
   filterGames (text) {
-    if (text) {
-    return this.props.games.filter(game => game.title.toLowerCase().includes(text))
-    } else {
-      return this.props.games
-    }
+    return !text ? this.props.games :
+      this.props.games.filter(game => game.title.toLowerCase().includes(text))
   } 
   render() {
     return(

@@ -4,7 +4,7 @@ import GameShelf from './GameShelf.js';
 import Footer from './Footer.js';
 import './App.css';
 
-class App extends Component {
+export default class App extends Component {
   constructor () {
     super();
     this.state = { 
@@ -12,11 +12,11 @@ class App extends Component {
       mainGenres: [],
       genres: [],
       platforms: [],
-      titleToFilter: "bill",
+      titleToFilter: "",
       genresToFilter: [],
       platformsToFilter: [],
       filteredGames: [],
-      multiplayer: [null, true, false]
+      multiplayer: [null, true, false],
      }
   }
   componentDidMount = () => {
@@ -28,7 +28,8 @@ class App extends Component {
           filteredGames: games.games1811
         })
       })
-      .then(() => this.getFilters())
+      .then(() => this.getFilters('platforms'))
+      .then(() => this.getFilters('genres'))
       .catch(error => {
         throw new Error(error)
       })
@@ -39,39 +40,24 @@ class App extends Component {
           mainGenres: genres.genres1811
         })
       })
-      .then(() => this.getFilters())
       .catch(error => {
         throw new Error(error)
       })
   }
-  getFilters = () => {
+  getFilters = (key) => {
     let filters = [];
-    let filtersTwo = [];
     this.state.games.forEach(game => {
-      game.platforms.forEach(val => {
+      game[key].forEach(val => {
         if (!filters.includes(val)){
           filters.push(val)
         }
       })
     })
-    this.state.games.forEach(game => {
-      game.genres.forEach(val => {
-        if (!filtersTwo.includes(val)){
-          filtersTwo.push(val)
-        }
-      })
-    })
-    this.setState({platforms: filters})
-    this.setState({genres: filtersTwo})
-                  
+    this.setState({[key]: filters})
   }
   updateState = (newState) => {
     this.setState(newState);
   }
-  filterGames = () => {
-
-  }
- 
   render() {
     return (
       <div className="app">
@@ -83,5 +69,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
