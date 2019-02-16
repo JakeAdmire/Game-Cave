@@ -2,39 +2,56 @@
   background-color: rgba(80, 80, 80, .8);
   border-radius: 20px;
   display: flex;
-  height: 130px;
+  height: 90px;
   justify-content: space-between;
   margin: auto;
   width: 300px;
-  box-shadow: 3px 2px 3px black, 3.5px 3.2px 3.5px #613941;
+  /*box-shadow: 3px 2px 3px black, 3.5px 3.2px 3.5px #613941;*/
+  transition: all .2s ease;
 }
 
 .game-card:hover {
-  box-shadow: 3px 2px 3px black, 4px 4px 4px rgb(206, 99, 255);
+  /*box-shadow: 3px 2px 3px black, 4px 4px 4px rgb(206, 99, 255);*/
+  box-shadow: 0px 4px 18px rgb(206, 99, 255);
 }
 
 .img {
   align-items: center;
   display: flex;
   justify-content: center;
-  padding: 0 10px;
+  padding: 0 5px;
 }
 
 .gamecover {
-  border-radius: 10px;
+  border-radius: 15px;
   height: 110px;
   width: 80px;
+  height: 80px;
 }
 
 .text-container {
-  /* display: flex; */
-  /* align-content: center; */
   width: 100%;
   word-wrap: break-word;
   letter-spacing: 1.2px;
-  text-shadow: 3px 2px 3px black;
-  /* font-family: 'Righteous', cursive; */
+  /*text-shadow: 0px 2px 3px black;*/
   font-family: 'Audiowide', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text-container h4 {
+  margin: 5px;
+}
+
+.text-container p {
+  margin: 0 0 0 50px;
+  color: #1a1d22;
+}
+
+.text-container p:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .add-to-library {
@@ -46,17 +63,24 @@
   color: white;
   font-size: 25px;
   height: 100%;
+  width: 45px;
+  transition: all .2s ease;
 }
 
-button:focus {
+.add-to-library:focus {
   outline: none;
 }
 
-button:hover {
+.add-to-library:hover {
   background-color: rgb(206, 99, 255);
-  /* rgb(108, 52, 97) */
+  cursor: pointer;
 }
 
 .active-btn {
   background-color: rgb(206, 99, 255);
+}
+
+.add-to-library:active,
+.text-container p:active {
+  opacity: 0.5;
 }
