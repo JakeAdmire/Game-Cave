@@ -10,12 +10,28 @@ export default class GenreBar extends Component {
     }
     updateGenres = () => {
         let checked = [];
-        const checkboxes = document.querySelectorAll('.genreCheckBox:checked')
-            checkboxes.forEach((elem) => {
-            checked.push(elem.value)
-    })
-    this.setState({genresToFilter: checked});
-    this.props.updateState({genresToFilter: this.state.genresToFilter})
+        const checkboxes = document.querySelectorAll('.genre-check-box')
+        checkboxes.forEach((elem) => {
+            if (elem.checked === true) {
+                checked.push(elem.id)
+            }
+        })
+        this.setState({genresToFilter: checked}, () => {
+            this.props.updateState({filteredGames: this.filterGames()})
+        });
+    }
+    filterGames = () => {
+        console.log(this.state.genresToFilter)
+        let newGames = [];
+        this.props.filteredGames.forEach(val => {
+            this.state.genresToFilter.forEach(elem => {
+                if (!newGames.includes(val) && val.genres.includes(elem)){
+                    newGames.push(val);
+                }
+            })
+        })
+        console.log(newGames)
+        return newGames.length === 0 ? this.props.games : newGames
     }
     render() {
         return (
@@ -24,7 +40,7 @@ export default class GenreBar extends Component {
                 {
                     this.props.genres.map((val, i) => {
                         return <CheckBox {...this.props}
-                                         genre={val}
+                                         name={val}
                                          class="genre-check-box"
                                          key={i}/>
                     })

@@ -5,8 +5,7 @@ import './GameShelf.css';
 export default class GameShelf extends Component {
   constructor (props) {
     super (props);
-    this.state = {
-    }
+    this.state = {}
   } 
   render () {
     let filteredGames = this.props.filteredGames

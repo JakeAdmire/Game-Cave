@@ -12,7 +12,6 @@ export default class App extends Component {
       mainGenres: [],
       genres: [],
       platforms: [],
-      titleToFilter: "",
       genresToFilter: [],
       platformsToFilter: [],
       filteredGames: [],
