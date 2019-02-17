@@ -1,6 +1,12 @@
-/* .genre-check {
-  display: none;
-} */
+ .genre-check {
+  position: absolute;
+  top: -470px;
+  width: 480px;
+  height: 455px;
+  background: black;
+  display: flex;
+  flex-wrap: wrap;
+} 
 
 .hide {
   display: none;
