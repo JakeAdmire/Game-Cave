@@ -22,13 +22,12 @@ export default class GenreBar extends Component {
     }
     filterGames = () => {
         console.log(this.state.genresToFilter)
-        let newGames = [];
-        this.props.filteredGames.forEach(val => {
-            this.state.genresToFilter.forEach(elem => {
-                if (!newGames.includes(val) && val.genres.includes(elem)){
-                    newGames.push(val);
-                }
-            })
+        let genres = this.state.genresToFilter;
+        let newGames = this.props.games.filter(val => {
+               return genres.every(elem => val.genres.includes(elem))
+                // if (!newGames.includes(val) && val.genres.includes(elem)){
+                //     newGames.push(val);
+                // }
         })
         console.log(newGames)
         return newGames.length === 0 ? this.props.games : newGames
