@@ -32,7 +32,7 @@ export default class GameShelf extends Component {
       }
     )
   }
-  componentDidUpdate = (prevProps, prevState) => {
+  componentDidUpdate = (prevProps) => {
     if (prevProps !== this.props) {
     this.setState({
       titleFilter: this.props.titleFilter,
@@ -52,7 +52,7 @@ export default class GameShelf extends Component {
   } 
   render () {
     let games = this.props.games;
-    if(this.state.titleFilter){
+    if (this.state.titleFilter){
       games = this.filterGamesTitle(games)
     }
     if (this.state.genres.length){
@@ -62,13 +62,13 @@ export default class GameShelf extends Component {
       games = this.filterByKey(games, 'platforms')
     }
     const popupOverlay = 
-      ( this.state.popup && <Popup {...this.state}
+      (this.state.popup && <Popup {...this.state}
         setPopup={this.statePopup}/> )
   return(
     <div className= 'game-shelf'>
       {popupOverlay}
       <article className='card-container'>
-        { games.map((game, index) => {
+        {games.map((game) => {
             return(
               <GameCard {...game}
                 setPopup={this.statePopup}
