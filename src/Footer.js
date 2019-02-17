@@ -11,7 +11,7 @@ import './Footer.css'
 export default function Footer(props) {
     return (
         <div className='footer'>
-            <SearchBar />
+            <SearchBar {...props}/>
             <PlatformBar {...props}/>
             <GenreBar {...props} />
             <MultiBar />

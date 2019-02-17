@@ -4,7 +4,7 @@ import GameShelf from './GameShelf.js';
 import Footer from './Footer.js';
 import './App.css';
 
-class App extends Component {
+export default class App extends Component {
   constructor () {
     super();
     this.state = { 
@@ -14,7 +14,8 @@ class App extends Component {
       platforms: [],
       genresToFilter: [],
       platformsToFilter: [],
-      multiplayer: [null, true, false]
+      filteredGames: [],
+      multiplayer: [null, true, false],
      }
   }
   componentDidMount = () => {
@@ -22,10 +23,12 @@ class App extends Component {
       .then(response => response.json())
       .then(games => {
         this.setState({
-          games: games.games1811
+          games: games.games1811,
+          filteredGames: games.games1811
         })
       })
-      .then(() => this.getFilters())
+      .then(() => this.getFilters('platforms'))
+      .then(() => this.getFilters('genres'))
       .catch(error => {
         throw new Error(error)
       })
@@ -36,51 +39,32 @@ class App extends Component {
           mainGenres: genres.genres1811
         })
       })
-      .then(() => this.getFilters())
       .catch(error => {
         throw new Error(error)
       })
   }
-  getFilters = () => {
+  getFilters = (key) => {
     let filters = [];
-    let filtersTwo = [];
     this.state.games.forEach(game => {
-      game.platforms.forEach(val => {
-        console.log("in filter1")
+      game[key].forEach(val => {
         if (!filters.includes(val)){
           filters.push(val)
         }
       })
     })
-    this.state.games.forEach(game => {
-      game.genres.forEach(val => {
-        if (!filtersTwo.includes(val)){
-          filtersTwo.push(val)
-        }
-      })
-    })
-    this.setState({platforms: filters})
-    this.setState({genres: filtersTwo})
-                  
+    this.setState({[key]: filters})
   }
   updateState = (newState) => {
     this.setState(newState);
   }
- 
   render() {
-    console.log("games", this.state.games);
-    console.log("plat", this.state.platforms);
-    console.log("genre", this.state.genres);
     return (
       <div className="app">
         <Header />
-        <GameShelf 
-          games={this.state.games}/>
+        <GameShelf {...this.state}/>
         <Footer {...this.state}
                 updateState={this.updateState}/>
       </div>
     );
   }
 }
-
-export default App;

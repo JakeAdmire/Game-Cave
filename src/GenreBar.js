@@ -10,21 +10,31 @@ export default class GenreBar extends Component {
     }
     updateGenres = () => {
         let checked = [];
-        const checkboxes = document.querySelectorAll('.genreCheckBox:checked')
-            checkboxes.forEach((elem) => {
-            checked.push(elem.value)
-    })
-    this.setState({genresToFilter: checked});
-    this.props.updateState({genresToFilter: this.state.genresToFilter})
+        const checkboxes = document.querySelectorAll('.genre-check-box')
+        checkboxes.forEach((elem) => {
+            if (elem.checked === true) {
+                checked.push(elem.id)
+            }
+        })
+        this.setState({genresToFilter: checked}, () => {
+            this.props.updateState({filteredGames: this.filterGames()})
+        });
+    }
+    filterGames = () => {
+        let genres = this.state.genresToFilter;
+        return this.props.games.filter(val => {
+            return genres.every(elem => val.genres.includes(elem))
+        })
     }
     render() {
+        console.log(this.props.filteredGames)
         return (
             <div className="genre-bar search-section">
                 <form onChange={this.updateGenres} className="genre-check">
                 {
                     this.props.genres.map((val, i) => {
                         return <CheckBox {...this.props}
-                                         genre={val}
+                                         name={val}
                                          class="genre-check-box"
                                          key={i}/>
                     })
