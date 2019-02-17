@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GameCard from './GameCard';
+import Popup from './Popup';
 import './GameShelf.css';
 
 export default class GameShelf extends Component {
@@ -10,7 +11,12 @@ export default class GameShelf extends Component {
   render () {
     let filteredGames = this.props.filteredGames
   return(
-    <div className='game-shelf'>
+
+    <div className= 'game-shelf'>
+      <section className="popup-container">
+        {// <Popup {...props}/>
+        }
+      </section>
       <article className='card-container'>
       {
         filteredGames.map((game, index) => {
@@ -20,7 +26,7 @@ export default class GameShelf extends Component {
           )
         })
       }
-      </article> 
+      </article>
     </div>
   )
 }

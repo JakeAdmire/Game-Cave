@@ -15,7 +15,7 @@ export default class GameCard extends Component {
           <div className="gamecover" style={style}></div>
         </section>
         <section className="text-container">
-          <h4>{this.props.name}</h4>
+          <h4>{this.props.title}</h4>
           <p>More Info..</p>
         </section>
         <section className="btn">
