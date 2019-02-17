@@ -10,11 +10,12 @@ export default class SearchBar extends Component {
   }
   updateText = event => {
     let searchText = event.target.value.toLowerCase()
-    this.props.updateState({filteredGames: this.filterGames(searchText)})
+    this.setState({text: searchText}, () => {
+      this.props.updateState({filteredGames: this.filterGames()})
+    })
   }
-  filterGames (text) {
-    return !text ? this.props.games :
-      this.props.games.filter(game => game.title.toLowerCase().includes(text))
+  filterGames = () => {
+      return this.props.games.filter(game => game.title.toLowerCase().includes(this.state.text))
   } 
   render() {
     return(

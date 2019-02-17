@@ -21,18 +21,13 @@ export default class GenreBar extends Component {
         });
     }
     filterGames = () => {
-        console.log(this.state.genresToFilter)
         let genres = this.state.genresToFilter;
-        let newGames = this.props.games.filter(val => {
-               return genres.every(elem => val.genres.includes(elem))
-                // if (!newGames.includes(val) && val.genres.includes(elem)){
-                //     newGames.push(val);
-                // }
+        return this.props.games.filter(val => {
+            return genres.every(elem => val.genres.includes(elem))
         })
-        console.log(newGames)
-        return newGames.length === 0 ? this.props.games : newGames
     }
     render() {
+        console.log(this.props.filteredGames)
         return (
             <div className="genre-bar search-section">
                 <form onChange={this.updateGenres} className="genre-check">
