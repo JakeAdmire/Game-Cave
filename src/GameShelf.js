@@ -34,7 +34,7 @@ export default class GameShelf extends Component {
     let filteredGames = this.props.filteredGames
     const popupOverlay = 
       ( this.state.popup && <Popup {...this.state}
-                            /> )
+        setPopup={this.statePopup}/> )
   return(
     <div className= 'game-shelf'>
       {popupOverlay}

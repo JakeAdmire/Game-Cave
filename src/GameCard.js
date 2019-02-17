@@ -23,17 +23,17 @@ export default class GameCard extends Component {
       this.state.gameGenres,
       this.state.gamePlatforms,
       this.state.gameMulti,
-      this.state.Image
+      this.state.gameImage
     )
   }
 
   render() {
     let inLibraryStatus = " + "
-    // const style = { backgroundImage: 'url(' + this.props.img + ')', backgroundSize: 'cover' };
+    const style = { backgroundImage: 'url(' + this.props.img + ')', backgroundSize: 'cover' };
     return(
       <div className="game-card">
         <section className="img">
-          <div className="gamecover"></div>
+          <div className="gamecover" style={style}></div>
         </section>
         <section className="text-container">
           <h4>{this.props.title}</h4>
