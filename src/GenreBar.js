@@ -6,7 +6,7 @@ import './GenreBar.css'
 export default class GenreBar extends Component {
     constructor(props) {
         super(props);
-        this.state = {genresToFilter: []}
+        this.state = {}
     }
     updateGenres = () => {
         let checked = [];
@@ -16,18 +16,15 @@ export default class GenreBar extends Component {
                 checked.push(elem.id)
             }
         })
-        this.setState({genresToFilter: checked}, () => {
-            this.props.updateState({filteredGames: this.filterGames()})
-        });
+        this.props.updateState({genresToFilter: checked})
     }
-    filterGames = () => {
-        let genres = this.state.genresToFilter;
-        return this.props.games.filter(val => {
-            return genres.every(elem => val.genres.includes(elem))
-        })
-    }
+    // filterGames = () => {
+    //     let genres = this.state.genresToFilter;
+    //     return this.props.filteredGames.filter(val => {
+    //         return genres.every(elem => val.genres.includes(elem))
+    //     })
+    // }
     render() {
-        console.log(this.props.filteredGames)
         return (
             <div className="genre-bar search-section">
                 <form onChange={this.updateGenres} className="genre-check">
