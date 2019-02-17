@@ -49,6 +49,19 @@
   color: #1a1d22;
 }
 
+.game-more {
+  background: none;
+  border:none;
+  font-size: 14px;
+  text-align: left;
+  height: 30px;
+}
+
+.game-more:hover {
+  color: rgb(206, 99, 255);
+  cursor: pointer;
+}
+
 .text-container p:hover {
   cursor: pointer;
   text-decoration: underline;
