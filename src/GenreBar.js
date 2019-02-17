@@ -18,12 +18,6 @@ export default class GenreBar extends Component {
         })
         this.props.updateState({genresToFilter: checked})
     }
-    // filterGames = () => {
-    //     let genres = this.state.genresToFilter;
-    //     return this.props.filteredGames.filter(val => {
-    //         return genres.every(elem => val.genres.includes(elem))
-    //     })
-    // }
     render() {
         return (
             <div className="genre-bar search-section">

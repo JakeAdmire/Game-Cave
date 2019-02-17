@@ -15,7 +15,8 @@ export default class GameShelf extends Component {
       currentMulti: false,
       currentImage: '',
       titleFilter: '',
-      genres: []
+      genres: [],
+      platforms: []
     }
   }
   statePopup = (popup, title, score, genre, plat, multi, img) => {
@@ -32,11 +33,11 @@ export default class GameShelf extends Component {
     )
   }
   componentDidUpdate = (prevProps, prevState) => {
-    console.log(prevState, this.state)
     if (prevProps !== this.props) {
     this.setState({
       titleFilter: this.props.titleFilter,
-      genres: this.props.genresToFilter
+      genres: this.props.genresToFilter,
+      platforms: this.props.platformsToFilter
     })
   }
 }
@@ -49,9 +50,6 @@ export default class GameShelf extends Component {
         return this.state[key].every(elem => val[key].includes(elem))
     })
   } 
-    //   games = games.filter(val => {
-  //     return this.state.genresToFilter.every(elem => val.genres.includes(elem))
-  //   })
   render () {
     let games = this.props.games;
     if(this.state.titleFilter){
@@ -59,6 +57,9 @@ export default class GameShelf extends Component {
     }
     if (this.state.genres.length){
       games = this.filterByKey(games, 'genres')
+    }
+    if (this.state.platforms.length){
+      games = this.filterByKey(games, 'platforms')
     }
     const popupOverlay = 
       ( this.state.popup && <Popup {...this.state}
