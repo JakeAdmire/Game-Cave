@@ -1,17 +1,18 @@
 .game-card {
   background-color: rgba(80, 80, 80, .8);
+  /**/
   border-radius: 20px;
+  border: none;
   display: flex;
   height: 90px;
   justify-content: space-between;
   margin: auto;
-  width: 300px;
-  /*box-shadow: 3px 2px 3px black, 3.5px 3.2px 3.5px #613941;*/
+  position: relative;
   transition: all .2s ease;
+  width: 300px;
 }
 
 .game-card:hover {
-  /*box-shadow: 3px 2px 3px black, 4px 4px 4px rgb(206, 99, 255);*/
   box-shadow: 0px 4px 18px rgb(206, 99, 255);
 }
 
@@ -23,7 +24,7 @@
 }
 
 .gamecover {
-  border-radius: 15px;
+  border-radius: 16px;
   height: 110px;
   width: 80px;
   height: 80px;
@@ -33,7 +34,6 @@
   width: 100%;
   word-wrap: break-word;
   letter-spacing: 1.2px;
-  /*text-shadow: 0px 2px 3px black;*/
   font-family: 'Audiowide', cursive;
   display: flex;
   flex-direction: column;
@@ -55,7 +55,7 @@
 }
 
 .add-to-library {
-  background-color: rgba(80, 80, 80, .8);
+  background-color: rgba(0, 0, 0, .2);
   border-left: 5px solid white;
   border-radius: 0 20px 20px 0;
   border: none;
