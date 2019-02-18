@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popup should match snapshop 1`] = `
+<div
+  className="popup-overlay"
+>
+  <div
+    className="popup"
+  >
+    <button
+      className="close"
+      onClick={[Function]}
+    >
+      X
+    </button>
+    <article
+      className="text-container"
+    >
+      <h3 />
+      <h4 />
+      <h4 />
+      <h4 />
+      <h4 />
+    </article>
+    <section>
+      <img />
+    </section>
+  </div>
+</div>
+`;

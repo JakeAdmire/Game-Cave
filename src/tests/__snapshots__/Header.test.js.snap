@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match snapshop 1`] = `
+<div
+  className="header"
+>
+  <h1
+    className="title"
+  >
+    GameCave
+  </h1>
+</div>
+`;

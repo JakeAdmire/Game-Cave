@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiBar should match snapshop 1`] = `
+<div
+  className="multi-bar search-section"
+>
+  <form>
+    <button
+      className="button"
+      onClick={[Function]}
+    >
+       MULTIPLAYER
+    </button>
+  </form>
+</div>
+`;
