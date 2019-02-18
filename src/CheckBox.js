@@ -1,4 +1,5 @@
 import React from 'react';
+import './CheckBox.css';
 
 export default function Footer (props) {
     return (
