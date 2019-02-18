@@ -6,11 +6,9 @@
   font-size: 40px;
   font-weight: 700;
   transition: all .2s ease;
-  opacity: 0.8;
-  border-left: solid 2px #556b90;
-  border-right: solid 2px #556b90;
-  border-top: solid 4px #546a905e;
-  background: rgba(80, 103, 144, 0.4);
+  border: solid #556b90;
+  border-width: 0 2px 0 2px;
+  background: none;
   color: #506790;
 }
 
@@ -23,4 +21,5 @@
 .lucky {
   height: 50px;
   font-size: 20px;
+  border-width: 0 0 0 2px;
 }
