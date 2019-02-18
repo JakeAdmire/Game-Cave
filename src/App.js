@@ -16,6 +16,8 @@ export default class App extends Component {
       platformsToFilter: [],
       filteredGames: [],
       multiplayer: [null, true, false],
+      titleFilter: '',
+      genresToFilter: []
      }
   }
   componentDidMount = () => {
