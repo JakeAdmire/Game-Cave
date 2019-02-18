@@ -14,8 +14,8 @@ export default function Footer(props) {
             <SearchBar {...props}/>
             <PlatformBar {...props}/>
             <GenreBar {...props} />
-            <MultiBar />
-            <LuckyBar />
+            <MultiBar {...props}/>
+            <LuckyBar {...props}/>
         </div>
     )
 }
