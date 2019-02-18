@@ -1,13 +1,67 @@
 .genre-check {
+  box-sizing: border-box;
+  padding: 30px;
   position: absolute;
-  top: -470px;
-  width: 480px;
-  height: 455px;
-  background: black;
+  bottom: 100px;
+  width: 90%;
+  /*height: 400px;*/
   display: flex;
+  /*justify-content: center;*/
   flex-wrap: wrap;
+  /*flex-direction: column;*/
+  /**/
+  background: hsla(233, 10%, 14%, 0.9);
+  box-shadow: 0px 4px 18px #ce63ff;
+  border: solid #ce63ff;
+  border-width: 0;
+  border-radius: 50px 50px 50px 50px;
 } 
 
 .hide {
   display: none;
+}
+
+/**/
+
+.genre-container {
+  width: 230px;
+}
+
+.genre-container label {
+  display: flex;
+  /*justify-content: center;*/
+  align-items: center;
+  margin: 10px 0 10px 0;
+}
+
+.genre-title {
+  margin: 0 50px 0 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.faux-box {
+  background: #a856d2;
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  transition: all .2s ease;
+  position: relative;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]:checked ~ div.faux-box:after {
+  position: absolute;
+  left: 8px;
+  top: 2px;
+  content: "";
+  width: 8px;
+  height: 16px;
+  border: solid #fff;
+  border-width: 0 5px 5px 0;
+  transform: rotate(45deg);
 }
