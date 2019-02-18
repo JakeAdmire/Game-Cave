@@ -8,16 +8,16 @@ export default class App extends Component {
   constructor () {
     super();
     this.state = { 
-      games: [],
-      mainGenres: [],
-      genres: [],
-      platforms: [],
-      genresToFilter: [],
-      platformsToFilter: [],
       filteredGames: [],
+      games: [],
+      genres: [],
+      genresToFilter: [],
+      mainGenres: [],
       multiplayer: [null, true, false],
+      platforms: [],
+      platformsToFilter: [],
       titleFilter: '',
-      genresToFilter: []
+      isLucky: false
      }
   }
   componentDidMount = () => {
