@@ -6,10 +6,7 @@ import './GenreBar.css'
 export default class GenreBar extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            genresToFilter: [], 
-            showGenres: false
-        }
+        this.state = {}
     }
     updateGenres = () => {
         let checked = [];
@@ -19,15 +16,7 @@ export default class GenreBar extends Component {
                 checked.push(elem.id)
             }
         })
-        this.setState({genresToFilter: checked}, () => {
-            this.props.updateState({filteredGames: this.filterGames()})
-        });
-    }
-    filterGames = () => {
-        let genres = this.state.genresToFilter;
-        return this.props.games.filter(val => {
-            return genres.every(elem => val.genres.includes(elem))
-        })
+        this.props.updateState({genresToFilter: checked})
     }
     toggleGenres = () => {
         if (this.state.showGenres) {
