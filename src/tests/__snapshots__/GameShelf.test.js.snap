@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameShelf should match snapshop 1`] = `
+<div
+  className="game-shelf"
+>
+  <article
+    className="card-container"
+  >
+    <GameCard
+      genres={
+        Array [
+          "Action",
+          "Adventure",
+          "Horror",
+        ]
+      }
+      img="https://i.ebayimg.com/images/g/ZX4AAOSw1vlUrlTm/s-l300.jpg"
+      key="The Last of Us"
+      metaScore={95}
+      multiplayer={true}
+      platforms={
+        Array [
+          "Playstation 3",
+          "Playstation 4",
+        ]
+      }
+      setPopup={[Function]}
+      title="The Last of Us"
+    />
+    <GameCard
+      genres={
+        Array [
+          "Beat-'Em-Up",
+          "Fighting",
+          "Couch-Co-Op",
+        ]
+      }
+      img="https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Super_Smash_Bros._Ultimate.jpg/220px-Super_Smash_Bros._Ultimate.jpg"
+      key="Super Smash Bros. Ultimate"
+      metaScore={93}
+      multiplayer={true}
+      platforms={
+        Array [
+          "Switch",
+        ]
+      }
+      setPopup={[Function]}
+      title="Super Smash Bros. Ultimate"
+    />
+    <GameCard
+      genres={
+        Array [
+          "Rogue-like",
+          "Horror",
+          "Strategy",
+        ]
+      }
+      img="https://static.giantbomb.com/uploads/scale_small/8/87790/2768049-box_tobir.jpg"
+      key="The Binding of Isaac: Rebirth"
+      metaScore={83}
+      multiplayer={false}
+      platforms={
+        Array [
+          "PC",
+          "Playstation 4",
+          "Xbox One",
+        ]
+      }
+      setPopup={[Function]}
+      title="The Binding of Isaac: Rebirth"
+    />
+    <GameCard
+      genres={
+        Array [
+          "Action",
+          "Adventure",
+          "RPG",
+          "Fantasy",
+        ]
+      }
+      img="https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/Dark_Souls_Cover_Art.jpg/220px-Dark_Souls_Cover_Art.jpg"
+      key="Dark Souls"
+      metaScore={64}
+      multiplayer={true}
+      platforms={
+        Array [
+          "PC",
+          "Playstation 4",
+          "Xbox One",
+        ]
+      }
+      setPopup={[Function]}
+      title="Dark Souls"
+    />
+  </article>
+</div>
+`;

@@ -6,7 +6,7 @@ import './PlatformBar.css';
 export default class ConsoleBar extends Component {
   constructor(props) {
     super(props);
-    this.state = { platformsToFilter: [] };
+    this.state = {};
   }
   updatePlatforms = () => {
     let checked = [];

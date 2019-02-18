@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LuckyBar should match snapshop 1`] = `
+<div
+  className="lucky-bar search-section"
+>
+  <button
+    className="button lucky random-all"
+  >
+    Random from All
+  </button>
+  <button
+    className="button lucky random-filter"
+  >
+    Random from Filters
+  </button>
+</div>
+`;

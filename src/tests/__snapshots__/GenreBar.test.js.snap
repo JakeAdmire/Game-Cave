@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GenreBar should match snapshop 1`] = `
+<div
+  className="genre-bar search-section"
+>
+  <form
+    className="genre-check hide"
+    onChange={[Function]}
+  >
+    <Footer
+      class="genre-check-box"
+      key="0"
+      name="Action"
+    />
+    <Footer
+      class="genre-check-box"
+      key="1"
+      name="Adventure"
+    />
+    <Footer
+      class="genre-check-box"
+      key="2"
+      name="Fantasy"
+    />
+  </form>
+  <button
+    className="button"
+    onClick={[Function]}
+  >
+    GENRES
+  </button>
+</div>
+`;

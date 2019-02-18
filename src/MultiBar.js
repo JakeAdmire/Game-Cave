@@ -4,9 +4,7 @@ import './MultiBar.css';
 export default class SearchBar extends Component {
   constructor() {
     super()
-    this.state = {
-      MULTIPLAYER: false
-    }
+    this.state = {}
   }
   handleToggle = event => {
     event.preventDefault();

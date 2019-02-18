@@ -37,8 +37,7 @@ export default class GenreBar extends Component {
                 <form onChange={this.updateGenres} className={hideGenres}>
                 {
                     this.props.genres.map((val, i) => {
-                        return <CheckBox {...this.props}
-                                         name={val}
+                        return <CheckBox name={val}
                                          class="genre-check-box"
                                          key={i}/>
                     })

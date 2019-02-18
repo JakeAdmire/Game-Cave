@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlatformBar should match snapshop 1`] = `
+<div
+  className="console-bar search-section"
+>
+  <div
+    className="platform-check"
+  >
+    <form
+      className="platform-check"
+      onChange={[Function]}
+    >
+      <Footer
+        class="platform-check-box"
+        key="0"
+        name="PS4"
+        platforms={
+          Array [
+            "PS4",
+            "PS3",
+            "XBOX",
+          ]
+        }
+      />
+      <Footer
+        class="platform-check-box"
+        key="1"
+        name="PS3"
+        platforms={
+          Array [
+            "PS4",
+            "PS3",
+            "XBOX",
+          ]
+        }
+      />
+      <Footer
+        class="platform-check-box"
+        key="2"
+        name="XBOX"
+        platforms={
+          Array [
+            "PS4",
+            "PS3",
+            "XBOX",
+          ]
+        }
+      />
+    </form>
+  </div>
+  <button
+    className="button"
+  >
+    PLATFORM
+  </button>
+</div>
+`;

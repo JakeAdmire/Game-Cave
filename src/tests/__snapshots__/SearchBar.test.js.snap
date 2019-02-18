@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar should match snapshop 1`] = `
+<div
+  className="search-bar search-section"
+>
+  <form
+    className="search-form"
+  >
+    <input
+      className="search"
+      maxLength="25"
+      onChange={[Function]}
+      placeholder="Search a game title!"
+    />
+    <div
+      className="clear-search"
+    >
+      <div
+        className="left-line"
+      />
+      <div
+        className="right-line"
+      />
+    </div>
+  </form>
+</div>
+`;

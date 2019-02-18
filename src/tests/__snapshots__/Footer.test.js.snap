@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should match snapshop 1`] = `
+<div
+  className="footer"
+>
+  <SearchBar />
+  <ConsoleBar />
+  <GenreBar />
+  <SearchBar />
+  <LuckyBar />
+</div>
+`;
