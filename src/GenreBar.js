@@ -18,10 +18,23 @@ export default class GenreBar extends Component {
         })
         this.props.updateState({genresToFilter: checked})
     }
+    toggleGenres = () => {
+        if (this.state.showGenres) {
+            this.setState({showGenres: false})
+        } else {
+            this.setState({ showGenres: true });   
+        }
+    }
     render() {
+        let hideGenres = "";
+        if (this.state.showGenres) {
+            hideGenres = "genre-check";
+        } else {
+            hideGenres = "genre-check hide"
+        }
         return (
             <div className="genre-bar search-section">
-                <form onChange={this.updateGenres} className="genre-check">
+                <form onChange={this.updateGenres} className={hideGenres}>
                 {
                     this.props.genres.map((val, i) => {
                         return <CheckBox {...this.props}
@@ -31,7 +44,7 @@ export default class GenreBar extends Component {
                     })
                 }
                 </form>
-                <button className="button">GENRES</button>
+                <button onClick={this.toggleGenres} className="button">GENRES</button>
             </div>
         )
     }

@@ -22,17 +22,17 @@ export default class ConsoleBar extends Component {
   render() {
     return (
       <div className="console-bar search-section">
-      <div className="platform-check">
-      <form onChange={this.updatePlatforms} className="platform-check">
-        {
-          this.props.platforms.map((val, i) => {
-            return <CheckBox {...this.props}
-              name={val}
-              class="platform-check-box"
-              key={i} />
-          })
-        }
-        </form>
+        <div className="platform-check">
+          <form onChange={this.updatePlatforms} className="platform-check">
+            {
+              this.props.platforms.map((val, i) => {
+                return <CheckBox {...this.props}
+                  name={val}
+                  class="platform-check-box"
+                  key={i} />
+              })
+            }
+          </form>
         </div>
         <button className="button">PLATFORM</button>
       </div>
