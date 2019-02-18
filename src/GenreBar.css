@@ -1,11 +1,16 @@
 .genre-check {
+  box-sizing: border-box;
+  padding: 30px;
   position: absolute;
-  top: -470px;
-  width: 480px;
-  height: 455px;
-  background: black;
+  bottom: 100px;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
+  background: hsla(233, 10%, 14%, 0.9);
+  box-shadow: 0px 4px 18px #ce63ff;
+  border: solid #ce63ff;
+  border-width: 0;
+  border-radius: 50px 50px 50px 50px;
 } 
 
 .hide {

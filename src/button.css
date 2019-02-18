@@ -1,6 +1,7 @@
 .button {
   box-sizing: border-box;
   width: 100%;
+  height: 100%;
   border: none;
   font-size: 2vw;
   font-weight: 700;
@@ -22,11 +23,12 @@
 }
 
 .lucky {
-  height: 50px;
+  height: 100%;
   font-size: 20px;
   border-width: 0 0 0 2px;
 }
 
-form {
+.multi-bar form {
   width: 100%;
+  height: 100%;
 }

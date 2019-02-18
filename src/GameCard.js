@@ -10,10 +10,10 @@ export default class GameCard extends Component {
       gameGenres: this.props.genres,
       gamePlatforms: this.props.platforms,
       gameMulti: this.props.multiplayer,
-      gameImage: this.props.img
+      gameImage: this.props.img,
+      inLibrary: false
      }
   }
-
   toggleInfo = () => {
     console.log(this.state.gameTitle)
     this.props.setPopup(
@@ -26,9 +26,21 @@ export default class GameCard extends Component {
       this.state.gameImage
     )
   }
-
+  changeLibraryStatus = () => {
+    if (this.state.inLibrary) {
+      this.setState({ inLibrary: false });
+    } else {
+      this.setState({ inLibrary: true });
+    }
+  }
   render() {
-    let inLibraryStatus = " + "
+    let libraryButtonClass = "add-to-library " + this.state.inLibrary;
+    let inLibraryStatus = " + ";
+    if (this.state.inLibrary) {
+      inLibraryStatus = " - ";
+    } else {
+      inLibraryStatus = " + ";
+    }
     const style = { backgroundImage: 'url(' + this.props.img + ')', backgroundSize: 'cover' };
     return(
       <div className="game-card">
@@ -42,7 +54,7 @@ export default class GameCard extends Component {
           </button>
         </section>
         <section className="btn">
-          <button className="add-to-library">{inLibraryStatus}</button>
+          <button onClick={this.changeLibraryStatus} className={libraryButtonClass}>{inLibraryStatus}</button>
         </section>
       </div>
     )
