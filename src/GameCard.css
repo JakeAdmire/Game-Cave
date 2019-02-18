@@ -80,6 +80,10 @@
   transition: all .2s ease;
 }
 
+button.true {
+  background: #5a729a;
+}
+
 .add-to-library:focus {
   outline: none;
 }
