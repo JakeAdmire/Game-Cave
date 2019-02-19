@@ -54,30 +54,23 @@ export default class GameShelf extends Component {
     })
   } 
   filterByMulti = (games) => {
-    return games.filter(game => game.multiplayer.toString().includes(this.state.isMulti))
+    return games.filter(game => game.multiplayer === this.state.isMulti)
   }
   shuffle = (games) => {
     let randoArr = games.sort(() => 0.5 - Math.random());
-    return [randoArr[0]] || [];
+    return [randoArr[0]];
   }
 
   render () {
     let games = this.props.games;
-    if (this.state.titleFilter){
-      games = this.filterGamesTitle(games)
-    }
-    if (this.state.genres.length){
-      games = this.filterByKey(games, 'genres')
-    }
-    if (this.state.platforms.length){
-      games = this.filterByKey(games, 'platforms')
-    }
-    if (this.state.isLucky && games.length) {
-      games = this.shuffle(games)
-    }
-    if (this.state.isMulti !== null){
-      games = this.filterByMulti(games)
-    }
+
+    games = this.state.titleFilter ? this.filterGamesTitle(games) : games;
+    games = this.state.genres.length ? this.filterByKey(games, 'genres') : games;
+    games = this.state.platforms.length ? this.filterByKey(games, 'platforms') : games;
+    games = this.state.isLucky && games.length ? this.shuffle(games) : games;
+    games = this.state.isMulti !== null ? this.filterByMulti(games) : games;
+    games = games.sort((a,b) => a.title.localeCompare(b.title));
+
     const popupOverlay = 
       (this.state.popup && <Popup {...this.state}
         setPopup={this.statePopup}/> )

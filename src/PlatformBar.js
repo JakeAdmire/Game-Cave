@@ -7,15 +7,10 @@ export default class PlatformBar extends Component {
     this.state = {showPlatforms: false};
   }
   togglePlatforms = () => {
-    this.state.showPlatforms ? 
-      (this.setState({ showPlatforms: false })) : 
-      (this.setState({ showPlatforms: true }));
+    this.setState({showPlatforms: this.state.showPlatforms ? false : true});
     }
   render() {
-    let hidePlatforms = "";
-    this.state.showPlatforms ? 
-      (hidePlatforms = "platform-check") : 
-      (hidePlatforms = "platform-check hide");
+    let hidePlatforms = this.state.showPlatforms ? "platform-check" :  "platform-check hide";
     let platforms = this.props.platforms.sort();
     return (
       <div className="console-bar search-section">
