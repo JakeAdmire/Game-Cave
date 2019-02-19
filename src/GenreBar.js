@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import CheckBox from './CheckBox.js';
-import './styles/GenreBar.css'
-
 
 export default class GenreBar extends Component {
     constructor(props) {

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import GameCard from './GameCard';
 import Popup from './Popup';
-import './styles/GameShelf.css';
 
 export default class GameShelf extends Component {
   constructor (props) {

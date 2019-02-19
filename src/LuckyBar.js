@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import './styles/LuckyBar.css';
 
 export default class LuckyBar extends Component {
   constructor(props) {
