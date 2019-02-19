@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Header from './Header.js';
 import GameShelf from './GameShelf.js';
 import Footer from './Footer.js';
-import './styles/App.css';
 
 export default class App extends Component {
   constructor() {

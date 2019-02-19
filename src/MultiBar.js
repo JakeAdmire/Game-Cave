@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './styles/MultiBar.css';
 
 export default class MultiBar extends Component {
   constructor(props) {

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import CheckBox from './CheckBox';
-import './styles/PlatformBar.css';
+import CheckBox from './CheckBox.js';
 
 export default class PlatformBar extends Component {
   constructor(props) {
