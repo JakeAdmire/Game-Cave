@@ -18,9 +18,15 @@
   border-width: 0 0 0 2px;
 }
 
+.current:hover:after {
+  border-color: white;
+}
+
 .current:after {
   content: "";
   position: absolute;
   bottom: 5px; left: 15px; right: 15px;
-  @include roundedBox($neonPurple, 5px, 5px, 5px, 5px, 5px, 5px);
+  transition: $transition;
+  @include glow(-4px);
+  @include roundedBox($neonPurple, 3px, 0, 5px, 5px, 5px, 5px);
 }
