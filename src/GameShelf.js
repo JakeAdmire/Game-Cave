@@ -17,7 +17,8 @@ export default class GameShelf extends Component {
       titleFilter: '',
       genres: [],
       platforms: [],
-      isLucky: false
+      isLucky: false,
+      isMulti: null
     }
   }
   statePopup = (popup, title, score, genre, plat, multi, img) => {
@@ -39,7 +40,8 @@ export default class GameShelf extends Component {
       titleFilter: this.props.titleFilter,
       genres: this.props.genresToFilter,
       platforms: this.props.platformsToFilter,
-      isLucky: this.props.isLucky
+      isLucky: this.props.isLucky,
+      isMulti: this.props.multiplayerToggle
     })
   }
 }
@@ -52,6 +54,9 @@ export default class GameShelf extends Component {
         return this.state[key].every(elem => val[key].includes(elem))
     })
   } 
+  filterByMulti = (games) => {
+    return games.filter(game => game.multiplayer.toString().includes(this.state.isMulti))
+  }
   shuffle = (games) => {
     let randoArr = games.sort(() => 0.5 - Math.random());
     return [randoArr[0]] || [];
@@ -70,6 +75,9 @@ export default class GameShelf extends Component {
     }
     if (this.state.isLucky && games.length) {
       games = this.shuffle(games)
+    }
+    if (this.state.isMulti !== null){
+      games = this.filterByMulti(games)
     }
     const popupOverlay = 
       (this.state.popup && <Popup {...this.state}
