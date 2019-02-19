@@ -8,41 +8,23 @@ export default class GenreBar extends Component {
         super(props);
         this.state = {}
     }
-    // updateGenres = () => {
-    //     let checked = [];
-    //     const checkboxes = document.querySelectorAll('.genre-check-box')
-    //     checkboxes.forEach((elem) => {
-    //         if (elem.checked === true) {
-    //             checked.push(elem.id)
-    //         }
-    //     })
-    //     this.props.updateState({genresToFilter: checked})
-    // }
     toggleGenres = () => {
-        if (this.state.showGenres) {
-            this.setState({showGenres: false})
-        } else {
-            this.setState({ showGenres: true });   
-        }
+        this.setState({ showGenres: this.state.showGenres ? false : true })
     }
     render() {
-        let hideGenres = "";
-        if (this.state.showGenres) {
-            hideGenres = "genre-check";
-        } else {
-            hideGenres = "genre-check hide"
-        }
+        let hideGenres = this.state.showGenres ? "genre-check" : "genre-check hide";
+        let genres = this.props.genres.sort();
         return (
             <div className="genre-bar search-section">
                 <form className={hideGenres}>
-                {
-                    this.props.genres.map((val, i) => {
-                        return <CheckBox name={val}
-                                  updateChecks= {this.props.updateChecks}
-                          class="genresToFilter check-box"
-                                  key={i}/>
-                    })
-                }
+                    {
+                        genres.map((val, i) => {
+                            return <CheckBox name={val}
+                                updateChecks={this.props.updateChecks}
+                                class="genresToFilter check-box"
+                                key={i} />
+                        })
+                    }
                 </form>
                 <button onClick={this.toggleGenres} className="button">GENRES</button>
             </div>
