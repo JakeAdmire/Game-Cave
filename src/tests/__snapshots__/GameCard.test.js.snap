@@ -34,7 +34,8 @@ exports[`GameCard should match snapshop 1`] = `
     className="btn"
   >
     <button
-      className="add-to-library"
+      className="add-to-library false"
+      onClick={[Function]}
     >
        + 
     </button>

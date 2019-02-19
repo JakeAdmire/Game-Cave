@@ -54,15 +54,8 @@ export default class GameShelf extends Component {
   } 
   shuffle = (games) => {
     let randoArr = games.sort(() => 0.5 - Math.random());
-    return [randoArr[0]];
+    return [randoArr[0]] || [];
   }
-
-// We need to randomize by filters. In gameShelf:
-// Randomize our games
-// Establish in state, rando (true/false)
-// If rando:
-// Select one game w/ or w/out our filters applied
-// - Each game, before being selected, needs to include each filter element
 
   render () {
     let games = this.props.games;
@@ -75,7 +68,7 @@ export default class GameShelf extends Component {
     if (this.state.platforms.length){
       games = this.filterByKey(games, 'platforms')
     }
-    if (this.state.isLucky) {
+    if (this.state.isLucky && games.length) {
       games = this.shuffle(games)
     }
     const popupOverlay = 

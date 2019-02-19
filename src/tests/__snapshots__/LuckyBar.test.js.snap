@@ -6,6 +6,7 @@ exports[`LuckyBar should match snapshop 1`] = `
 >
   <button
     className="button lucky random-all"
+    onClick={[Function]}
   >
     Random from All
   </button>

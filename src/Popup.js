@@ -12,7 +12,6 @@ export default class Popup extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div className="popup-overlay">
         <div className="popup">

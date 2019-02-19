@@ -10,6 +10,7 @@ exports[`App should match snapshop 1`] = `
     games={Array []}
     genres={Array []}
     genresToFilter={Array []}
+    isLucky={false}
     mainGenres={Array []}
     multiplayer={
       Array [
@@ -27,6 +28,7 @@ exports[`App should match snapshop 1`] = `
     games={Array []}
     genres={Array []}
     genresToFilter={Array []}
+    isLucky={false}
     mainGenres={Array []}
     multiplayer={
       Array [
