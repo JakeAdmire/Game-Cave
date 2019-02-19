@@ -54,8 +54,9 @@ export default class GameShelf extends Component {
   } 
   shuffle = (games) => {
     let randoArr = games.sort(() => 0.5 - Math.random());
-    return [randoArr[0]];
+    return [randoArr[0]] || [];
   }
+
   render () {
     let games = this.props.games;
     if (this.state.titleFilter){
@@ -67,7 +68,7 @@ export default class GameShelf extends Component {
     if (this.state.platforms.length){
       games = this.filterByKey(games, 'platforms')
     }
-    if (this.state.isLucky) {
+    if (this.state.isLucky && games.length) {
       games = this.shuffle(games)
     }
     const popupOverlay = 

@@ -8,32 +8,34 @@ export default class ConsoleBar extends Component {
     super(props);
     this.state = {};
   }
-  updatePlatforms = () => {
-    let checked = [];
-    const checkboxes = document.querySelectorAll('.platform-check-box')
-    checkboxes.forEach((elem) => {
-      if (elem.checked === true) {
-        checked.push(elem.id)
-      }
-    })
-    console.log(checked)
-    this.props.updateState({platformsToFilter: checked})
-  }
+
+  //! FIX: Cant use query selector here
+  // checkPlatforms = () => {
+  //   let checked = [];
+  //   const checkboxes = document.querySelectorAll('.platform-check-box')
+  //   checkboxes.forEach((elem) => {
+  //     if (elem.checked === true) {
+  //       checked.push(elem.id)
+  //     }
+  //   })
+  //   this.updatePlatforms(checked);
+  // }
+  // updatePlatforms = (checked) => {
+  //   this.props.updateState({platformsToFilter: checked})
+  // }
   render() {
     return (
       <div className="console-bar search-section">
-        <div className="platform-check">
-          <form onChange={this.updatePlatforms} className="platform-check">
+          <form className="platform-check">
             {
               this.props.platforms.map((val, i) => {
-                return <CheckBox {...this.props}
-                  name={val}
-                  class="platform-check-box"
+                return <CheckBox name={val}
+                  updateChecks= {this.props.updateChecks}
+                  class="platformsToFilter check-box"
                   key={i} />
               })
             }
           </form>
-        </div>
         <button className="button">PLATFORM</button>
       </div>
     )

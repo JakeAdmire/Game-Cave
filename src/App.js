@@ -54,6 +54,14 @@ export default class App extends Component {
     })
     this.setState({[key]: filters})
   }
+  updateChecks = (event) => {
+    const key = event.target.classList[0]
+    let checks= this.state[key];
+    const add = () => checks.push(event.target.id)
+    const remove = () => checks.splice(checks.indexOf(event.target.id), 1)
+    event.target.checked ? add() : remove();
+    this.setState({[key]: checks})
+  }
   updateState = (newState) => {
     this.setState(newState);
   }
@@ -63,7 +71,8 @@ export default class App extends Component {
         <Header />
         <GameShelf {...this.state}/>
         <Footer {...this.state}
-                updateState={this.updateState}/>
+                updateChecks= {this.updateChecks}
+                updateState= {this.updateState}/>
       </div>
     );
   }

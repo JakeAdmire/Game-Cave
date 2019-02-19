@@ -18,6 +18,7 @@ describe('App', () => {
       games: [],
       mainGenres: [],
       genres: [],
+      isLucky: false,
       platforms: [],
       genresToFilter: [],
       platformsToFilter: [],
