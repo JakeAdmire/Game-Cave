@@ -8,13 +8,9 @@ export default class Popup extends Component {
 
   closePopup = () => {
     this.props.setPopup( false );
-    console.log(this.props.currentMulti)
   }
 
   render() {
-    let multi = ""
-    console.log(this.props.img)
-    this.props.currentMulti ? multi="true" : multi="false";
     const styleImg = { backgroundImage: 'url(' + this.props.currentImage + ')', backgroundSize: 'cover',  };
 
     return (
@@ -30,11 +26,11 @@ export default class Popup extends Component {
             <h4 className="popup-score">MetaCritic Score: 
               <span className="value"> {this.props.currentScore}</span></h4>
             <h4 className="popup-multi">Multiplayer: 
-              <span className="value"> {multi}</span></h4>
+              <span className="value"> {(this.props.currentMulti).toString()}</span></h4>
             <h4 className="popup-plat">Available On: 
-              <span className="value"> {this.props.currentPlatforms}</span></h4>
+              <span className="value"> {this.props.currentPlatforms.join(" - ")}</span></h4>
             <h4 className="popup-genre">Genres: 
-              <span className="value"> {this.props.currentGenres}</span></h4>
+              <span className="value"> {this.props.currentGenres.join(" - ")}</span></h4>
           </article>
         </div>
       </div>
