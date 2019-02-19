@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GameCard from './GameCard';
 import Popup from './Popup';
-import './GameShelf.css';
+import './styles/GameShelf.css';
 
 export default class GameShelf extends Component {
   constructor (props) {
@@ -56,14 +56,6 @@ export default class GameShelf extends Component {
     let randoArr = games.sort(() => 0.5 - Math.random());
     return [randoArr[0]];
   }
-
-// We need to randomize by filters. In gameShelf:
-// Randomize our games
-// Establish in state, rando (true/false)
-// If rando:
-// Select one game w/ or w/out our filters applied
-// - Each game, before being selected, needs to include each filter element
-
   render () {
     let games = this.props.games;
     if (this.state.titleFilter){

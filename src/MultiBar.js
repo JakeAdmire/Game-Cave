@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './MultiBar.css';
+import './styles/MultiBar.css';
 
 export default class SearchBar extends Component {
   constructor() {

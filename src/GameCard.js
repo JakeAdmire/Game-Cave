@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './GameCard.css';
+import './styles/GameCard.css';
 
 export default class GameCard extends Component {
   constructor(props) {
