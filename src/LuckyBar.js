@@ -11,8 +11,7 @@ export default class LuckyBar extends Component {
 render() {
   return(
     <div className="lucky-bar search-section">
-      <button className="button lucky random-all" onClick={this.handleLucky}>Random from All</button>
-      <button className="button lucky random-filter" onClick={this.props.randomFilter}>Random from Filters</button>
+      <button className="button lucky random-all" onClick={this.handleLucky}>RANDOM</button>
     </div>
   )}
 }
