@@ -4,7 +4,8 @@ You can learn more about the assignment spec by following [this link.](http://fr
 
 ## Contact Info
 Credit for the project goes to team members:
-- Devin Kapla (DevinKapla@gamil.com)
+- Devin Kapla [Email](mailto:DevinKapla@gamil.com)
+              [GitHub](https://github.com/DekayHaHa)
 - Jacob Admire: [GitHub](https://github.com/JakeAdmire) 
                 [Email](mailto:JakeAdmire1@gmail.com)
 - Justin Pyktel ()
