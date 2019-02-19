@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CheckBox from './CheckBox';
 import './styles/PlatformBar.css';
 
+export default class PlatformBar extends Component {
   constructor(props) {
     super(props);
     this.state = {showPlatforms: false};
