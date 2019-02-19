@@ -4,13 +4,12 @@ import './styles/SearchBar.css';
 export default class SearchBar extends Component {
   constructor(props) {
     super(props)
-    this.state = { }
+    this.state = {}
   }
   updateText = event => {
     let searchText = event.target.value.toLowerCase()
     this.props.updateState({titleFilter: searchText})
   }
-
   render() {
     return(
       <div className="search-bar search-section">

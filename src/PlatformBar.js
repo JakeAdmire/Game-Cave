@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import CheckBox from './CheckBox'
+import CheckBox from './CheckBox';
 import './styles/PlatformBar.css';
 
-export default class ConsoleBar extends Component {
   constructor(props) {
     super(props);
     this.state = {showPlatforms: false};
@@ -17,11 +16,12 @@ export default class ConsoleBar extends Component {
     this.state.showPlatforms ? 
       (hidePlatforms = "platform-check") : 
       (hidePlatforms = "platform-check hide");
+    let platforms = this.props.platforms.sort();
     return (
       <div className="console-bar search-section">
           <form className={hidePlatforms}>
             {
-              this.props.platforms.map((val, i) => {
+              platforms.map((val, i) => {
                 return <CheckBox name={val}
                   updateChecks= {this.props.updateChecks}
                   class="platformsToFilter check-box"
