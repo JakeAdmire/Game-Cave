@@ -12,7 +12,7 @@ export default class App extends Component {
       genres: [],
       genresToFilter: [],
       mainGenres: [],
-      multiplayer: [null, true, false],
+      multiplayerToggle: null,
       platforms: [],
       platformsToFilter: [],
       titleFilter: '',

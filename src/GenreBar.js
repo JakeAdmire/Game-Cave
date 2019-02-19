@@ -6,7 +6,7 @@ import './styles/GenreBar.css'
 export default class GenreBar extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {showGenres: false}
     }
     toggleGenres = () => {
         this.setState({ showGenres: this.state.showGenres ? false : true })
