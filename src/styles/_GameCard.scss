@@ -1,31 +1,26 @@
 .game-card {
-  background-color: rgba(80, 80, 80, .8);
-  /**/
-  border-radius: 20px;
-  border: none;
-  display: flex;
+  background-color: hsla(0, 0%, 31%, 0.8);
+  @include roundedBox(none, 0, 0, 20px, 20px, 20px, 20px); 
   height: 90px;
+  width: 300px;
   justify-content: space-between;
   margin: auto;
+  display: flex;
   position: relative;
-  transition: all .2s ease;
-  width: 300px;
+  transition: $transition;
 }
 
 .game-card:hover {
-  box-shadow: 0px 4px 18px rgb(206, 99, 255);
+  @include glow(4px);
 }
 
 .img {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  @include flexCenter();
   padding: 0 5px;
 }
 
 .gamecover {
   border-radius: 16px;
-  height: 110px;
   width: 80px;
   height: 80px;
 }
@@ -34,7 +29,6 @@
   width: 100%;
   word-wrap: break-word;
   letter-spacing: 1.2px;
-  font-family: 'Audiowide', cursive;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -44,57 +38,36 @@
   margin: 5px;
 }
 
-.text-container p {
-  margin: 0 0 0 50px;
-  color: #1a1d22;
-}
-
 .game-more {
-  background: none;
-  border:none;
+  width: 100%;
+  margin: 0 0 5px 5px;
   font-size: 14px;
   text-align: left;
-  height: 30px;
 }
 
 .game-more:hover {
-  color: rgb(206, 99, 255);
-  cursor: pointer;
-}
-
-.text-container p:hover {
+  color: $neonPurple;
   cursor: pointer;
   text-decoration: underline;
 }
 
 .add-to-library {
-  background-color: rgba(0, 0, 0, .2);
-  border-left: 5px solid white;
-  border-radius: 0 20px 20px 0;
-  border: none;
-  box-sizing: border-box;
+  background: hsla(0, 0%, 0%, 0.2);
   color: white;
   font-size: 25px;
   height: 100%;
   width: 45px;
   transition: all .2s ease;
+  @include roundedBox(white, 0, 0, 0, 20px, 20px, 0);
 }
 
 button.true {
-  background: #5a729a;
-}
-
-.add-to-library:focus {
-  outline: none;
+  background: $cyan;
 }
 
 .add-to-library:hover {
-  background-color: rgb(206, 99, 255);
+  background-color: $neonPurple;
   cursor: pointer;
-}
-
-.active-btn {
-  background-color: rgb(206, 99, 255);
 }
 
 .add-to-library:active,
