@@ -1,14 +1,15 @@
-// @import 'variables';
+@import 'variables';
 @import 'App';
-@import 'button';
-@import 'CheckBox';
-@import 'Footer';
-@import 'GameCard';
-@import 'GameShelf';
-@import 'GenreBar';
 @import 'Header';
-@import 'LuckyBar';
-@import 'MultiBar';
-@import 'PlatformBar';
-@import 'Popup';
+@import 'GameShelf';
+@import 'GameCard';
+// 
+@import 'Footer';
 @import 'SearchBar';
+@import 'PlatformGenreBar';
+@import 'MultiBar';
+@import 'LuckyBar';
+// 
+@import 'Popup';
+@import 'CheckBox';
+@import 'button';

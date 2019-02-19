@@ -1,0 +1,15 @@
+.platform-check,
+.genre-check {
+  padding: 30px;
+  position: absolute;
+  bottom: 100px; left: 50px; right: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  background: $screenColor;
+  @include glow(4px);
+  @include roundedBox($neonPurple, 0, 0, 50px, 50px, 50px, 50px);
+} 
+
+form.hide {
+  display: none;
+}

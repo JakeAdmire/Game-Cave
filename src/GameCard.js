@@ -48,9 +48,9 @@ export default class GameCard extends Component {
         </section>
         <section className="text-container">
           <h4>{this.props.title}</h4>
-          <button className="game-more" onClick={this.toggleInfo}>
+          <p className="game-more" onClick={this.toggleInfo}>
             More Info..
-          </button>
+          </p>
         </section>
         <section className="btn">
           <button onClick={this.changeLibraryStatus} className={libraryButtonClass}>{inLibraryStatus}</button>

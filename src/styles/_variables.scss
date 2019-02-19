@@ -1,0 +1,41 @@
+// VARIABLEs
+  // colors
+$screenColor: hsla(233, 10%, 14%, 0.9);
+$neonPurple: hsl(281, 100%, 69%);
+$cranberryTuesday: hsl(348, 41%, 45%);
+$cyan: hsl(218, 26%, 48%);
+$blueScreen: hsla(240, 83%, 9%, 0.6);
+  // misc.
+$transition: all .2s ease;
+
+
+// MIXINs
+@mixin fullSize() {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin roundedBox(
+  $color, $sizeV, $sizeH, $topL, $topR, $bottomR, $bottomL) {
+  border: solid $color;
+  border-width: $sizeV $sizeH $sizeV $sizeH;
+  border-radius: $topL $topR $bottomR $bottomL;
+}
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin glow($dir) { 
+  box-shadow: 0px $dir 18px $neonPurple; 
+}
+
+@mixin font($color, $size, $weight) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
