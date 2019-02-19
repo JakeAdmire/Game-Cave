@@ -2,31 +2,24 @@ import React, { Component } from 'react';
 import CheckBox from './CheckBox'
 import './styles/PlatformBar.css';
 
-// Requires 'state' to keep track of consoles the user selects?
 export default class ConsoleBar extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {showPlatforms: false};
   }
-
-  //! FIX: Cant use query selector here
-  // checkPlatforms = () => {
-  //   let checked = [];
-  //   const checkboxes = document.querySelectorAll('.platform-check-box')
-  //   checkboxes.forEach((elem) => {
-  //     if (elem.checked === true) {
-  //       checked.push(elem.id)
-  //     }
-  //   })
-  //   this.updatePlatforms(checked);
-  // }
-  // updatePlatforms = (checked) => {
-  //   this.props.updateState({platformsToFilter: checked})
-  // }
+  togglePlatforms = () => {
+    this.state.showPlatforms ? 
+      (this.setState({ showPlatforms: false })) : 
+      (this.setState({ showPlatforms: true }));
+    }
   render() {
+    let hidePlatforms = "";
+    this.state.showPlatforms ? 
+      (hidePlatforms = "platform-check") : 
+      (hidePlatforms = "platform-check hide");
     return (
       <div className="console-bar search-section">
-          <form className="platform-check">
+          <form className={hidePlatforms}>
             {
               this.props.platforms.map((val, i) => {
                 return <CheckBox name={val}
@@ -36,7 +29,7 @@ export default class ConsoleBar extends Component {
               })
             }
           </form>
-        <button className="button">PLATFORM</button>
+        <button onClick={this.togglePlatforms} className="button">PLATFORM</button>
       </div>
     )
   }

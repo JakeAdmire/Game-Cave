@@ -6,32 +6,18 @@ import './styles/GenreBar.css'
 export default class GenreBar extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {showGenres: false}
     }
-    // updateGenres = () => {
-    //     let checked = [];
-    //     const checkboxes = document.querySelectorAll('.genre-check-box')
-    //     checkboxes.forEach((elem) => {
-    //         if (elem.checked === true) {
-    //             checked.push(elem.id)
-    //         }
-    //     })
-    //     this.props.updateState({genresToFilter: checked})
-    // }
     toggleGenres = () => {
-        if (this.state.showGenres) {
-            this.setState({showGenres: false})
-        } else {
-            this.setState({ showGenres: true });   
-        }
+    this.state.showGenres ? 
+      (this.setState({ showGenres: false })) : 
+      (this.setState({ showGenres: true }));
     }
     render() {
         let hideGenres = "";
-        if (this.state.showGenres) {
-            hideGenres = "genre-check";
-        } else {
-            hideGenres = "genre-check hide"
-        }
+        this.state.showGenres ? 
+            (hideGenres = "genre-check") : 
+            (hideGenres = "genre-check hide");
         return (
             <div className="genre-bar search-section">
                 <form className={hideGenres}>
