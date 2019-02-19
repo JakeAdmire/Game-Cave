@@ -8,19 +8,15 @@ export default class ConsoleBar extends Component {
     this.state = {showPlatforms: false};
   }
   togglePlatforms = () => {
-        if (this.state.showPlatforms) {
-            this.setState({showPlatforms: false})
-        } else {
-            this.setState({ showPlatforms: true });   
-        }
+    this.state.showPlatforms ? 
+      (this.setState({ showPlatforms: false })) : 
+      (this.setState({ showPlatforms: true }));
     }
   render() {
     let hidePlatforms = "";
-        if (this.state.showPlatforms) {
-            hidePlatforms = "platform-check";
-        } else {
-            hidePlatforms = "platform-check hide"
-        }
+    this.state.showPlatforms ? 
+      (hidePlatforms = "platform-check") : 
+      (hidePlatforms = "platform-check hide");
     return (
       <div className="console-bar search-section">
           <form className={hidePlatforms}>
