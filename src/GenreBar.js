@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CheckBox from './CheckBox.js';
-import './GenreBar.css'
+import './styles/GenreBar.css'
 
 
 export default class GenreBar extends Component {

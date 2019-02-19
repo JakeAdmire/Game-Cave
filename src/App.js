@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import Header from './Header.js';
 import GameShelf from './GameShelf.js';
 import Footer from './Footer.js';
-import './App.css';
+import './styles/App.css';
 
 export default class App extends Component {
   constructor () {
     super();
     this.state = { 
-      filteredGames: [],
       games: [],
       genres: [],
       genresToFilter: [],
@@ -25,8 +24,7 @@ export default class App extends Component {
       .then(response => response.json())
       .then(games => {
         this.setState({
-          games: games.games1811,
-          filteredGames: games.games1811
+          games: games.games1811
         })
       })
       .then(() => this.getFilters('platforms'))

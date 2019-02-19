@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CheckBox from './CheckBox'
-import './PlatformBar.css';
+import './styles/PlatformBar.css';
 
 // Requires 'state' to keep track of consoles the user selects?
 export default class ConsoleBar extends Component {
