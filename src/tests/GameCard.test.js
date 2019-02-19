@@ -28,7 +28,8 @@ describe('GameCard', () => {
       gameGenres: game.genres,
       gamePlatforms: game.platforms,
       gameMulti: game.multiplayer,
-      gameImage: game.img
+      gameImage: game.img,
+      inLibrary: false
     });
   })
 })
