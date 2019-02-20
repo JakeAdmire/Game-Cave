@@ -29,7 +29,8 @@
 }
 
 .close,
-.popup-text button {
+.popup-text button,
+#genre .showGame {
   &:hover {
     cursor: pointer;
     box-shadow: none;
@@ -136,5 +137,28 @@
     margin: 5px 0 0 0;
     width: 175px;
     @include font($cyan, 15px, 500);
+  }
+}
+
+#genre {
+  padding: 62px 15px 0 15px;
+  flex-wrap: wrap;
+  div {
+    h3 {
+      margin: 0;
+      @include font(#fff, 14px, 600);
+    }
+    p {
+      margin: 0;
+      @include font($cyan, 12px, 400);
+    }
+  }
+  .showGame {
+    position: absolute;
+    top: 13px; right: 13px;
+    background: hsla(0, 0%, 0%, 0.6);
+    transition: $transition;
+    @include font($cranberryTuesday, 20px, 800);
+    @include roundedBox($cranberryTuesday, 3px, 3px, 0, 0, 0, 0);
   }
 }
