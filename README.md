@@ -12,8 +12,13 @@ Credit for the project goes to team members:
 
 ## What was learned?
 What was learned 1 
-
-    code example 1
+```
+  filterByKey = (games, key) => {
+    return games.filter(val => {
+        return this.state[key].every(elem => val[key].includes(elem))
+    })
+  } 
+```
 What was learned 2 
 
     code example 2
