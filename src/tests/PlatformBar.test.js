@@ -3,23 +3,33 @@ import ReactDOM from 'react-dom';
 import PlatformBar from '../PlatformBar';
 import { shallow } from 'enzyme';
 
-const updateStateMock = jest.fn();
+// const updateStateMock = jest.fn();
 
-let plats = ['PS4', 'PS3', 'XBOX']
+const plats = ['PS4', 'PS3', 'XBOX']
+const toFilterMock = ['PS4', 'PS3']
 describe('PlatformBar', () => {
   let wrapper;
   beforeEach(() => {
     wrapper = shallow(
-      <PlatformBar platforms={plats}
-        updateState= {updateStateMock}/>
+      <PlatformBar 
+        platformsToFilter={toFilterMock}
+        platforms={plats}
+        // updateState={updateStateMock}
+        />
     );
   });
   it('should match snapshop', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should invoke updateState upon input change', () => {
-    wrapper.find('.platform-check').simulate('change');
-    expect(updateStateMock).toBeCalled();
+  it('should have default state', () => {
+    expect(wrapper.state()).toEqual({
+      showPlatforms: false
+    });
   })
+
+  // it('should invoke updateState upon input change', () => {
+  //   wrapper.find('form').simulate('change');
+  //   expect(updateStateMock).toBeCalled();
+  // })
 })

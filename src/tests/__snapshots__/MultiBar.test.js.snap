@@ -4,13 +4,14 @@ exports[`MultiBar should match snapshop 1`] = `
 <div
   className="multi-bar search-section"
 >
-  <form>
-    <button
-      className="button"
-      onClick={[Function]}
-    >
-       MULTIPLAYER
-    </button>
-  </form>
+  <button
+    className="button multi-all"
+    onClick={[Function]}
+  >
+     MULTIPLAYER
+    <p>
+      ANY
+    </p>
+  </button>
 </div>
 `;

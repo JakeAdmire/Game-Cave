@@ -5,27 +5,27 @@ exports[`PlatformBar should match snapshop 1`] = `
   className="console-bar search-section"
 >
   <form
-    className="platform-check"
-    onChange={[Function]}
+    className="platform-check hide"
   >
-    <Footer
-      class="platform-check-box"
+    <CheckBox
+      class="platformsToFilter check-box"
       key="0"
-      name="PS4"
-    />
-    <Footer
-      class="platform-check-box"
-      key="1"
       name="PS3"
     />
-    <Footer
-      class="platform-check-box"
+    <CheckBox
+      class="platformsToFilter check-box"
+      key="1"
+      name="PS4"
+    />
+    <CheckBox
+      class="platformsToFilter check-box"
       key="2"
       name="XBOX"
     />
   </form>
   <button
-    className="button"
+    className="button current"
+    onClick={[Function]}
   >
     PLATFORM
   </button>

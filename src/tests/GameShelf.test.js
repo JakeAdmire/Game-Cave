@@ -52,6 +52,7 @@ describe('GameShelf', () => {
       currentGenres: [],
       currentPlatforms: [],
       isLucky: false,
+      isMulti: null,
       currentMulti: false,
       currentImage: '',
       titleFilter: '',

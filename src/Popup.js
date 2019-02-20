@@ -4,7 +4,7 @@ export default class Popup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showGenre: false,
+      showGenres: false,
       genreData: []
     };
   }
@@ -18,7 +18,6 @@ export default class Popup extends Component {
       return this.props.currentGenres.includes(ea.genre);
     });
     this.setState({genreData: allGenres, showGenre: true})
-    console.log(this.state.genreData)
   }
 
   render() {
@@ -28,7 +27,6 @@ export default class Popup extends Component {
         <div className="popup-overlay">
           <div id="genre" className="popup">
             <button className="close" onClick={this.closePopup}>X</button>
-
               {this.state.genreData.map(genre => {
                 return (
                   <div>
@@ -37,12 +35,10 @@ export default class Popup extends Component {
                   </div>) 
                 })}
               <button className="showGame" onClick={() => {this.setState({showGenre: false})}}>Show Game</button>
-
           </div>
         </div>
       )
     }
-
     return (
       <div className="popup-overlay">
         <div className="popup">

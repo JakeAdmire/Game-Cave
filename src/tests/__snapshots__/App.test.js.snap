@@ -6,40 +6,27 @@ exports[`App should match snapshop 1`] = `
 >
   <Header />
   <GameShelf
-    filteredGames={Array []}
     games={Array []}
     genres={Array []}
     genresToFilter={Array []}
     isLucky={false}
     mainGenres={Array []}
-    multiplayer={
-      Array [
-        null,
-        true,
-        false,
-      ]
-    }
+    multiplayerToggle={null}
     platforms={Array []}
     platformsToFilter={Array []}
     titleFilter=""
   />
   <Footer
-    filteredGames={Array []}
     games={Array []}
     genres={Array []}
     genresToFilter={Array []}
     isLucky={false}
     mainGenres={Array []}
-    multiplayer={
-      Array [
-        null,
-        true,
-        false,
-      ]
-    }
+    multiplayerToggle={null}
     platforms={Array []}
     platformsToFilter={Array []}
     titleFilter=""
+    updateChecks={[Function]}
     updateState={[Function]}
   />
 </div>

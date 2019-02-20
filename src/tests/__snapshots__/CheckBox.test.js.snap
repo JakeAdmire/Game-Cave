@@ -6,6 +6,7 @@ exports[`CheckBox should match snapshop 1`] = `
 >
   <label>
     <input
+      onChange={[MockFunction]}
       type="checkbox"
     />
     <div

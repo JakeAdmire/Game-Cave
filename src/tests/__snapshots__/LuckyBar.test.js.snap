@@ -5,15 +5,10 @@ exports[`LuckyBar should match snapshop 1`] = `
   className="lucky-bar search-section"
 >
   <button
-    className="button lucky random-all"
+    className="button lucky"
     onClick={[Function]}
   >
-    Random from All
-  </button>
-  <button
-    className="button lucky random-filter"
-  >
-    Random from Filters
+    RANDOM
   </button>
 </div>
 `;

@@ -5,9 +5,9 @@ exports[`Footer should match snapshop 1`] = `
   className="footer"
 >
   <SearchBar />
-  <ConsoleBar />
+  <PlatformBar />
   <GenreBar />
-  <SearchBar />
+  <MultiBar />
   <LuckyBar />
 </div>
 `;
