@@ -13,18 +13,84 @@ exports[`Popup should match snapshop 1`] = `
     >
       X
     </button>
-    <article
-      className="text-container"
+    <div
+      className="popup-img-container"
     >
-      <h3 />
-      <h4 />
-      <h4 />
-      <h4 />
-      <h4 />
+      <section
+        className="popup-img"
+        style={
+          Object {
+            "backgroundImage": "url(https://i.ebayimg.com/images/g/ZX4AAOSw1vlUrlTm/s-l300.jpg)",
+            "backgroundSize": "cover",
+          }
+        }
+      />
+    </div>
+    <article
+      className="popup-text-container"
+    >
+      <h3
+        className="popup-title"
+      >
+        Game Title:
+        <span
+          className="value"
+        >
+           
+          Skyrim
+        </span>
+      </h3>
+      <h4
+        className="popup-score"
+      >
+        MetaCritic Score:
+        <span
+          className="value"
+        >
+           
+          99
+        </span>
+      </h4>
+      <h4
+        className="popup-multi"
+      >
+        Multiplayer:
+        <span
+          className="value"
+        >
+           
+          false
+        </span>
+      </h4>
+      <h4
+        className="popup-plat"
+      >
+        Available On:
+        <span
+          className="value"
+        >
+           
+          PC - Switch
+        </span>
+      </h4>
+      <h4
+        className="popup-genre"
+      >
+        Genres:
+        <span
+          className="value genre"
+        >
+           
+          Adventure - Action
+        </span>
+      </h4>
+      <button
+        className="showGenre"
+        onClick={[Function]}
+      >
+        Show Genre Details
+      </button>
     </article>
-    <section>
-      <img />
-    </section>
   </div>
 </div>
 `;

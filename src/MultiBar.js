@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class MultiBar extends Component {
   constructor(props) {
     super(props)
-    this.state = { }
+    this.state = {}
   }
   handleToggle = () => {
     if (this.props.multiplayerToggle === null) { this.props.updateState({ multiplayerToggle: true }) } 

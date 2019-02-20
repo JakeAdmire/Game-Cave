@@ -22,8 +22,7 @@ describe('App', () => {
       platforms: [],
       genresToFilter: [],
       platformsToFilter: [],
-      filteredGames: [],
-      multiplayer: [null, true, false],
+      multiplayerToggle: null,
       titleFilter: '',
       genresToFilter: []
      });

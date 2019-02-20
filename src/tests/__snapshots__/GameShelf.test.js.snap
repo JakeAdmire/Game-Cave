@@ -12,21 +12,23 @@ exports[`GameShelf should match snapshop 1`] = `
         Array [
           "Action",
           "Adventure",
-          "Horror",
+          "RPG",
+          "Fantasy",
         ]
       }
-      img="https://i.ebayimg.com/images/g/ZX4AAOSw1vlUrlTm/s-l300.jpg"
-      key="The Last of Us"
-      metaScore={95}
+      img="https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/Dark_Souls_Cover_Art.jpg/220px-Dark_Souls_Cover_Art.jpg"
+      key="Dark Souls"
+      metaScore={64}
       multiplayer={true}
       platforms={
         Array [
-          "Playstation 3",
+          "PC",
           "Playstation 4",
+          "Xbox One",
         ]
       }
       setPopup={[Function]}
-      title="The Last of Us"
+      title="Dark Souls"
     />
     <GameCard
       genres={
@@ -75,23 +77,21 @@ exports[`GameShelf should match snapshop 1`] = `
         Array [
           "Action",
           "Adventure",
-          "RPG",
-          "Fantasy",
+          "Horror",
         ]
       }
-      img="https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/Dark_Souls_Cover_Art.jpg/220px-Dark_Souls_Cover_Art.jpg"
-      key="Dark Souls"
-      metaScore={64}
+      img="https://i.ebayimg.com/images/g/ZX4AAOSw1vlUrlTm/s-l300.jpg"
+      key="The Last of Us"
+      metaScore={95}
       multiplayer={true}
       platforms={
         Array [
-          "PC",
+          "Playstation 3",
           "Playstation 4",
-          "Xbox One",
         ]
       }
       setPopup={[Function]}
-      title="Dark Souls"
+      title="The Last of Us"
     />
   </article>
 </div>

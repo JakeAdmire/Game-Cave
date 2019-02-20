@@ -10,7 +10,14 @@ describe('LuckyBar', () => {
       <LuckyBar />
     );
   });
+
   it('should match snapshop', () => {
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should have default state', () => {
+    expect(wrapper.state()).toEqual({
+      active: false
+    });
+  })
 })

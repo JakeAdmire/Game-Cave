@@ -6,26 +6,25 @@ exports[`GenreBar should match snapshop 1`] = `
 >
   <form
     className="genre-check hide"
-    onChange={[Function]}
   >
-    <Footer
-      class="genre-check-box"
+    <CheckBox
+      class="genresToFilter check-box"
       key="0"
       name="Action"
     />
-    <Footer
-      class="genre-check-box"
+    <CheckBox
+      class="genresToFilter check-box"
       key="1"
       name="Adventure"
     />
-    <Footer
-      class="genre-check-box"
+    <CheckBox
+      class="genresToFilter check-box"
       key="2"
       name="Fantasy"
     />
   </form>
   <button
-    className="button"
+    className="button current"
     onClick={[Function]}
   >
     GENRES

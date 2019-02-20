@@ -7,10 +7,6 @@ export default class LuckyBar extends Component {
   }
   handleLucky = () => {
     this.props.updateState({isLucky: this.props.isLucky ? false : true});
-    this.toggleActive();
-  }
-  toggleActive = () => {
-    console.log(this.state.active);
     this.setState({ active: this.state.active ? false : true })
   }
   render() {

@@ -23,12 +23,12 @@ exports[`GameCard should match snapshop 1`] = `
     <h4>
       Dark Souls
     </h4>
-    <button
+    <p
       className="game-more"
       onClick={[Function]}
     >
       More Info..
-    </button>
+    </p>
   </section>
   <section
     className="btn"
