@@ -73,6 +73,7 @@ export default class GameShelf extends Component {
 
     const popupOverlay = 
       (this.state.popup && <Popup {...this.state}
+        mainGenres={this.props.mainGenres}
         setPopup={this.statePopup}/> )
   return(
     <div className= 'game-shelf'>
