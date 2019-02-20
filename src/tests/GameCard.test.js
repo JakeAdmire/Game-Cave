@@ -11,11 +11,14 @@ const game = {
   "metaScore": 64,
   "img": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/Dark_Souls_Cover_Art.jpg/220px-Dark_Souls_Cover_Art.jpg"}
 
+const setPopupMock = jest.fn();
+
 describe('GameCard', () => {
   let wrapper;
   beforeEach(() => {
     wrapper = shallow(
-      <GameCard {...game}/>
+      <GameCard {...game}
+      setPopup={setPopupMock}/>
     );
   });
   it('should match snapshop', () => {
@@ -31,5 +34,16 @@ describe('GameCard', () => {
       gameImage: game.img,
       inLibrary: false
     });
+  });
+
+  it('should invoke setPopup() on click', () => {
+    wrapper.find('.game-more').simulate('click');
+    expect(setPopupMock).toBeCalled();
+  });
+
+  it('should update inLibrary status when button is clicked', () => {
+    expect(wrapper.state('inLibrary')).toEqual(false);
+    wrapper.find('.add-to-library').simulate('click');
+    expect(wrapper.state('inLibrary')).toEqual(true);
   })
 })

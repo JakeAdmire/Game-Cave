@@ -34,6 +34,15 @@ const games =[{"title": "The Last of Us",
             "metaScore": 64,
             "img": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/Dark_Souls_Cover_Art.jpg/220px-Dark_Souls_Cover_Art.jpg"}]
 
+const gameMock = {
+  "title": "Dark Souls",
+  "platforms": ["PC", "Playstation 4", "Xbox One"],
+  "genres": ["Action", "Adventure", "RPG", "Fantasy"],
+  "multiplayer": true,
+  "metaScore": 64,
+  "img": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8d/Dark_Souls_Cover_Art.jpg/220px-Dark_Souls_Cover_Art.jpg"
+};
+
 describe('GameShelf', () => {
   let wrapper;
   beforeEach(() => {
@@ -41,7 +50,7 @@ describe('GameShelf', () => {
       <GameShelf games={games}/>
     );
   });
-  it('should match snapshop', () => {
+  it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
   it ('should have default state', () => {
@@ -59,5 +68,39 @@ describe('GameShelf', () => {
       genres: [],
       platforms: []
      });
+  });
+
+  it('should update states after invoking statePopup', () => {
+    wrapper.instance().statePopup(
+      true,
+      games[0].title,
+      games[0].metaScore,
+      games[0].genres,
+      games[0].platforms,
+      games[0].multiplayer,
+      games[0].img)
+    expect(wrapper.state()).toEqual({
+      popup: true,
+      currentTitle: games[0].title,
+      currentScore: games[0].metaScore,
+      currentGenres: games[0].genres,
+      currentPlatforms: games[0].platforms,
+      isLucky: false,
+      isMulti: null,
+      currentMulti: games[0].multiplayer,
+      currentImage: games[0].img,
+      titleFilter: '',
+      genres: [],
+      platforms: []
+    });
+  })
+
+  it('should be able to filter games by title', () => {
+    wrapper.setState({ titleFilter: 'dark'})
+    const results = wrapper.instance().filterGamesTitle(games)
+    expect(results).toEqual([gameMock])
+
+
+
   })
 })

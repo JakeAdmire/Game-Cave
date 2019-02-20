@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GameShelf should match snapshop 1`] = `
+exports[`GameShelf should match snapshot 1`] = `
 <div
   className="game-shelf"
 >

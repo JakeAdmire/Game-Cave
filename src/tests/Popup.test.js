@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import Popup from '../Popup';
 import { shallow } from 'enzyme';
 
-const setPopupMock = jest.fn();
+const statePopupMock = jest.fn();
 
 const mockProps = {
   popup: false,
@@ -12,8 +12,7 @@ const mockProps = {
   currentGenres: ['Adventure', 'Action'],
   currentPlatforms: ['PC', 'Switch'],
   currentMulti: false,
-  currentImage: 'https://i.ebayimg.com/images/g/ZX4AAOSw1vlUrlTm/s-l300.jpg',
-  setPopup: {setPopupMock}
+  currentImage: 'https://i.ebayimg.com/images/g/ZX4AAOSw1vlUrlTm/s-l300.jpg'
 }
 
 const mockGenres = [
@@ -39,7 +38,8 @@ describe('Popup', () => {
     wrapper = shallow(
       <Popup {...mockProps}
               popupState={popupStateMock}
-              mainGenres={mockGenres}/>
+              mainGenres={mockGenres}
+              setPopup={statePopupMock}/>
     );
   });
 
@@ -60,10 +60,8 @@ describe('Popup', () => {
     expect(wrapper.state('showGenre')).toEqual(true);
   })
 
-  //! ================Finish=========================
-  // it('should invoke setPopup on button click', () => {
-  //   wrapper.find('.close').simulate('click');
-  //   expect(mockProps(setPopupMock)).toBeCalled();
-  // })
-  //! =================================================
+  it('should invoke setPopup on button click', () => {
+    wrapper.find('.close').simulate('click');
+    expect(statePopupMock).toBeCalled();
+  })
 })
