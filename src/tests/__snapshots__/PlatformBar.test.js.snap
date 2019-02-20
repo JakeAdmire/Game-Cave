@@ -1,11 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PlatformBar should match snapshop 1`] = `
+exports[`PlatformBar should match snapshot 1`] = `
 <div
   className="console-bar search-section"
+  onBlur={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
 >
   <form
     className="platform-check hide"
+    onBlur={[Function]}
+    tabIndex="0"
   >
     <CheckBox
       class="platformsToFilter check-box"

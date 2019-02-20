@@ -16,7 +16,6 @@ export default class PlatformBar extends Component {
     this.setState({ showPlatforms: this.state.mouseIn ? true : false })
   }
   render() {
-    console.log('platform', this.state.showPlatforms);
     let hidePlatforms = this.state.showPlatforms ? "platform-check" :  "platform-check hide";
     let buttonSelector = this.props.platformsToFilter.length ? "button current" : "button";
     let platforms = this.props.platforms.sort();

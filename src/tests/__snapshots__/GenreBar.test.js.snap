@@ -3,9 +3,14 @@
 exports[`GenreBar should match snapshop 1`] = `
 <div
   className="genre-bar search-section"
+  onBlur={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
 >
   <form
     className="genre-check hide"
+    onBlur={[Function]}
+    tabIndex="0"
   >
     <CheckBox
       class="genresToFilter check-box"
