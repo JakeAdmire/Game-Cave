@@ -25,7 +25,7 @@
 .current:after {
   content: "";
   position: absolute;
-  bottom: 5px; left: 15px; right: 15px;
+  bottom: 10px; left: 15px; right: 15px;
   transition: $transition;
   @include glow(-4px);
   @include roundedBox($neonPurple, 3px, 0, 5px, 5px, 5px, 5px);
