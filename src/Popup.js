@@ -42,25 +42,34 @@ export default class Popup extends Component {
     return (
       <div className="popup-overlay">
         <div className="popup">
-        <button className="close" onClick={this.closePopup}>X</button>
-          <div className="popup-img-container">
-            <section className="popup-img" style={styleImg}></section>
-          </div>
-          <article className="popup-text-container">
-            <h3 className="popup-title">Game Title: 
-              <span className="value"> {this.props.currentTitle}</span></h3>
-            <h4 className="popup-score">MetaCritic Score: 
-              <span className="value"> {this.props.currentScore}</span></h4>
-            <h4 className="popup-multi">Multiplayer: 
-              <span className="value"> {(this.props.currentMulti).toString()}</span></h4>
-            <h4 className="popup-plat">Available On: 
-              <span className="value"> {this.props.currentPlatforms.join(" - ")}</span></h4>
-            <h4 className="popup-genre">Genres: 
-              <span className="value genre"> {this.props.currentGenres.join(" - ")}</span></h4>
-              <button className="showGenre" onClick={this.getGenreDescript}>Show Genre Details</button>
+          <button className="close" onClick={this.closePopup}>X</button>
+          <section className="popup-img" style={styleImg}></section>
+          <article className="popup-text">
+            <h3 className="popup-title">{(this.props.currentTitle).toUpperCase()}</h3>
+            <h4 className="popup-score">
+              <p>MetaCritic</p>
+              <p>{this.props.currentScore}</p>
+              <p>SCORE</p>
+            </h4>
+            <h4 className="popup-genre">{this.props.currentGenres.join(", ")}</h4>
+            <button className="showGenre" onClick={this.getGenreDescript}>Show Genre Info..</button>
+            <h4 className="popup-plat">
+              <p>Available On:</p>
+              <p>{this.props.currentPlatforms.join(", ")}</p>
+            </h4>
+            <h4 className="popup-multi">
+              <p>Multiplayer:</p>
+              <p>{(this.props.currentMulti).toString().toUpperCase()}</p>
+            </h4>
           </article>
         </div>
       </div>
     )
   }
 }
+
+
+
+          
+          
+              

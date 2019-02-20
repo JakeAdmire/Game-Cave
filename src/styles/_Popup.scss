@@ -3,55 +3,138 @@
   position: fixed;
   top: 0; bottom: 0; left: 0; right: 0;
   z-index: 2;
-  @include fullSize();
 }
 
 .popup {
-  background: $screenColor;
+  background: rgba($screenColor, 1);
+  display: flex;
   position: relative;
-  top: 150px;
-  height: 60%;
-  width: 60%;
   margin: auto;
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  grid-template-areas: 
-  "img text";
+  top: 150px;
+  width: 700px;
+  height: 400px;
   @include glow(4px);
   @include roundedBox($neonPurple, 0, 3px, 20px, 20px, 20px, 20px);
 }
 
-.popup-img-container {
-  grid-area: img;
-  @include flexCenter();
+.close {
+  position: absolute;
+  left: 10px; top: 10px;
+  background: hsla(0, 0%, 0%, 0.6);
+  z-index: 1;
+  box-shadow: 0px 2px 8px 1px black;
+  transition: $transition;
+  @include font($cranberryTuesday, 25px, 800);
+  @include roundedBox($cranberryTuesday, 3px, 3px, 100%, 100%, 100%, 100%);
+}
+
+.close,
+.popup-text button {
+  &:hover {
+    cursor: pointer;
+    box-shadow: none;
+    color: darken($cranberryTuesday, 10%);
+    border-color: darken($cranberryTuesday, 10%);
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.popup-text,
+.popup-img {
+  width: 50%;
+  height: 100%;
 }
 
 .popup-img {
-  background-position: center;
-  @include roundedBox(none, 0, 0, 16px, 0, 0, 16px);
-  @include fullSize();
+  background-size: contain;
+  background-repeat: no-repeat;
+  @include roundedBox(none, 0, 0, 20px, 0, 0, 20px);
 }
 
-.popup-text-container {
-  grid-area: text;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  font-size: 20px;
-  padding: 0 20px;
-  color: $cyan;
-}
-
-.close {
+.popup-img::after {
+  content: "";
   position: absolute;
-  right: 30px; top: 20px;
-  background: hsla(0, 0%, 100%, 0.2);
-  font-size: 25px;
-  color: #fff;
-  transition: $transition;
-  @include roundedBox(none, 0, 0, 100%, 100%, 100%, 100%);
+  height: 100%;
+  width: 50%;
+  background-image: linear-gradient(to right, rgba($screenColor, 0.3) , rgba($screenColor, 1));
+  @include roundedBox(none, 0, 0, 20px, 0, 0, 20px); 
 }
 
-.close:hover {
-  background: $neonPurple;
+.popup-text {
+  display: flex;
+  flex-direction: column;
+  h4 {
+    margin: 0;
+  }
+  h3 {
+    margin: 10px 0 0 0;
+    @include font(#fff, 32px, 700);
+  }
+  button {
+    background: none;
+    border: solid $cranberryTuesday 2px;
+    width: 161px;
+    padding: 5px;
+    margin: 5px 0 0 0;
+    transition: $transition;
+    @include font($cranberryTuesday, 14px, 700);
+  }
+}
+
+.popup-genre {
+  @include font($cyan, 14px, 400);
+}
+
+.popup-score {
+  background: hsla(0, 0%, 100%, 0.2);
+  width: 160px;
+  height: 160px;
+  margin: 0;
+  position: absolute;
+  right: 0; bottom: 0;
+  @include flexCenter();
+  flex-direction: column;
+  @include roundedBox(none, 0, 0, 15px, 0, 20px, 0);
+}
+
+.popup-score {
+  p { 
+    margin: 0; 
+  }
+  p:first-child {
+    @include font(#fff, 24px, 700);
+    height: 12%;
+  }
+  p:nth-child(2) {
+    @include font($cranberryTuesday, 70px, 700);
+    height: 50%;
+  }
+  p:last-child { 
+    @include font(#fff, 34px, 700); 
+  }
+}
+
+.popup-plat {
+  bottom: 110px;
+}
+
+.popup-multi {
+  bottom: 30px;
+}
+
+.popup-plat,
+.popup-multi {
+  position: absolute;
+
+  p:first-child {
+    margin: 20px 0 0 0;
+    @include font(#fff, 22px, 700);
+  }
+  p:last-child {
+    margin: 5px 0 0 0;
+    width: 175px;
+    @include font($cyan, 15px, 500);
+  }
 }
