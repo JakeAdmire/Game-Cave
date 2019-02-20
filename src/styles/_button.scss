@@ -1,4 +1,5 @@
 .button {
+  position: relative;
   background: none;
   transition: $transition;
   @include fullSize();
@@ -7,13 +8,25 @@
 }
 
 .button:hover {
-  background: rgb(80, 103, 144);
+  background: $cyan;
   color: white;
   cursor: pointer;
 }
 
 .lucky {
-  height: 100%;
-  font-size: 20px;
+  @include roundedBox($cyan, 0, 0, 0, 48px, 0, 0);
   border-width: 0 0 0 2px;
+}
+
+.current:hover:after {
+  border-color: white;
+}
+
+.current:after {
+  content: "";
+  position: absolute;
+  bottom: 5px; left: 15px; right: 15px;
+  transition: $transition;
+  @include glow(-4px);
+  @include roundedBox($neonPurple, 3px, 0, 5px, 5px, 5px, 5px);
 }

@@ -11,6 +11,7 @@ export default class GenreBar extends Component {
     }
     render() {
         let hideGenres = this.state.showGenres ? "genre-check" : "genre-check hide";
+        let buttonSelector = this.props.genresToFilter.length ? "button current" : "button";
         let genres = this.props.genres.sort();
         return (
             <div className="genre-bar search-section">
@@ -24,7 +25,7 @@ export default class GenreBar extends Component {
                         })
                     }
                 </form>
-                <button onClick={this.toggleGenres} className="button">GENRES</button>
+                <button onClick={this.toggleGenres} className={buttonSelector}>GENRES</button>
             </div>
         )
     }

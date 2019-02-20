@@ -1,0 +1,12 @@
+.multi-bar p {
+  position: absolute;
+  left: 25px;
+  bottom: -5px;
+  font-size: 15px;
+  color: $neonPurple;
+  transition: $transition;
+}
+
+.button:hover > p {
+  color: white;
+}
