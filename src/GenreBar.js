@@ -4,7 +4,13 @@ import CheckBox from './CheckBox.js';
 export default class GenreBar extends Component {
     constructor(props) {
         super(props);
-        this.state = {showGenres: false}
+        this.state = {showGenres: false, mouseIn: false}
+    }
+    toggleMouse = () => {
+        this.setState({ mouseIn: this.state.mouseIn ? false : true });
+    }
+    focusLost = () => {
+        this.setState({ showGenres: this.state.mouseIn ? true : false })
     }
     toggleGenres = () => {
         this.setState({ showGenres: this.state.showGenres ? false : true })
@@ -14,8 +20,8 @@ export default class GenreBar extends Component {
         let buttonSelector = this.props.genresToFilter.length ? "button current" : "button";
         let genres = this.props.genres.sort();
         return (
-            <div className="genre-bar search-section">
-                <form className={hideGenres}>
+            <div onBlur={this.focusLost} onMouseEnter={this.toggleMouse} onMouseLeave={this.toggleMouse} className="genre-bar search-section">
+                <form onBlur={this.focusLost} tabIndex="0" className={hideGenres}>
                     {
                         genres.map((val, i) => {
                             return <CheckBox name={val}
