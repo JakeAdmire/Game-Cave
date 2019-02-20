@@ -59,7 +59,18 @@ export default class GameShelf extends Component {
   shuffle = (games) => {
     let randoArr = games.sort(() => 0.5 - Math.random());
     return [randoArr[0]];
-  }
+	}
+	
+	displayGames = (games) => {
+		games = games.sort((a, b) => a.title.localeCompare(b.title));
+		return games.map((game) => {
+			return (
+				<GameCard {...game}
+					setPopup={this.statePopup}
+					key={game.title} />
+			)
+		})
+	}
 
   render () {
     let games = this.props.games;
@@ -69,7 +80,6 @@ export default class GameShelf extends Component {
     games = this.state.platforms.length ? this.filterByKey(games, 'platforms') : games;
     games = this.state.isLucky && games.length ? this.shuffle(games) : games;
     games = this.state.isMulti !== null ? this.filterByMulti(games) : games;
-    games = games.sort((a,b) => a.title.localeCompare(b.title));
 
     const popupOverlay = 
       (this.state.popup && <Popup {...this.state}
@@ -79,14 +89,7 @@ export default class GameShelf extends Component {
     <div className= 'game-shelf'>
       {popupOverlay}
       <article className='card-container'>
-        {games.map((game) => {
-            return(
-              <GameCard {...game}
-                setPopup={this.statePopup}
-                key={game.title}/>
-            )
-          })
-        }
+        {this.displayGames(games)}
         </article>
       </div>
     )
