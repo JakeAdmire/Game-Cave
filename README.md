@@ -16,6 +16,10 @@ Credit for the project goes to team members:
 
  ![demo](https://user-images.githubusercontent.com/23123990/53147491-f41c2e00-3564-11e9-855a-c4bb272f36a0.gif)
 
+## Brief Presentation
+
+ ![presentation](https://user-images.githubusercontent.com/23123990/53151649-f97f7580-3570-11e9-90f8-62d905cce6cd.gif)
+
 ## Specific things we learned:
 DEVIN TYPE SOME INFO ABOUT WHAT THIS SNIPPET IS AND WHY IT'S IMPORTANT
 ```
