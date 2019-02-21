@@ -54,12 +54,12 @@ export default class App extends Component {
     this.setState({ [key]: filters })
   }
   updateChecks = (event) => {
-    const key = event.target.classList[0]
+    const key = event.target.classList[0];
     let checks = this.state[key];
-    const add = () => checks.push(event.target.id)
-    const remove = () => checks.splice(checks.indexOf(event.target.id), 1)
+    const add = () => checks.push(event.target.id);
+    const remove = () => checks.splice(checks.indexOf(event.target.id), 1);
     event.target.checked ? add() : remove();
-    this.setState({ [key]: checks })
+    this.setState({ [key]: checks });
   }
   updateState = (newState) => {
     this.setState(newState);
@@ -72,7 +72,7 @@ export default class App extends Component {
       platformsToFilter: [],
       titleFilter: '',
       isLucky: false
-      })
+      });
   }
   render() {
     return (

@@ -22,7 +22,7 @@ export default class GameCard extends Component {
       this.state.gamePlatforms,
       this.state.gameMulti,
       this.state.gameImage
-    )
+    );
   }
   changeLibraryStatus = () => {
     this.setState({ inLibrary: this.state.inLibrary ? false : true });
