@@ -87,6 +87,8 @@ These are extensions that we plan to implement at some point in the future:
 
 [User Feedback](https://github.com/JakeAdmire/game-shelf/blob/master/Resources/Notes/User_Feedback.md)
 
+[Presentation](https://my.visme.co/projects/mxngjwzw-gamecave)
+
 ## Credits
 Credit for this project goes to [Devin Kapla](https://github.com/DekayHaHa), [Jake Admire](https://github.com/JakeAdmire), and [Justin Pyktel](https://github.com/SiimonStark)
 
