@@ -43,7 +43,7 @@ and thus whether or not it can be affected by onBlur." --Jake
 #### Member Two:
 "I personally feel a great deal more confident working with React and making components that speak to eachother. 'Data-Down, Actions-Up' and the idea of passing methods back and forth was at first a bizarre concept that I couldn't grasp, but now I fully understand it and am capable of working with it" --Jake
 #### Member Three:
-"Justin Win" --Justin
+"Seriously got my reps in with Conditional (ternary) Operators with the use of Conditional Renders in React. My figgest feat was learning how to generate a popup with not only information from our primary dataset, but to then use that same popup for displaying our secondary dataset." --Justin
 
 ## Future Implementation Plans
 These are extensions that we plan to implement at some point in the future:
