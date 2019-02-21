@@ -14,7 +14,6 @@ describe('PlatformBar', () => {
       <PlatformBar 
         platformsToFilter={toFilterMock}
         platforms={plats}
-        // updateState={updateStateMock}
         />
     );
   });
