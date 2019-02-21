@@ -40,6 +40,9 @@ and thus whether or not it can be affected by onBlur." --Jake
     <form onBlur={this.focusLost} tabIndex="0" className={hidePlatforms}>
 ```
 #### Member Three:
+
+<img width="726" alt="screen shot 2019-02-21 at 12 42 09 am" src="https://user-images.githubusercontent.com/23123990/53151982-a4902f00-3571-11e9-8ab4-8bd7d69e5d71.png">
+
 "Justin Challenge" --Justin
 ## Project "Wins"
 #### Member One:
