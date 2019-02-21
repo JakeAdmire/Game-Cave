@@ -15,7 +15,9 @@ Credit for the project goes to team members:
 ## Screenshots of Project
 
   ![image description](image link)
+  
   ![image description](image link)
+  
   ![image description](image link)
 
 ## Specific things we learned:
@@ -53,14 +55,17 @@ These are extensions that we plan to implement at some point in the future:
 
 ## Tools Used to Build Project
 [Sublime Text Editor](https://www.sublimetext.com/)
-[VSCode]
-[React]
-[Enzyme]
-[Jest]
+
+[VSCode](https://code.visualstudio.com/)
+
+[React](https://reactjs.org/)
+
+[Enzyme](https://airbnb.io/enzyme/) & [Jest](https://airbnb.io/enzyme/docs/guides/jest.html)
 
 ## Credits
 Credit for this project goes to Devin Kapla, Jake Admire, and Justin Pyktel
 
 ---
 This project was assigned by Brittany Storoz, Pamela Lovett, and Robbie Jaeger 
+
 *@ Turing School of Software and Design, Denver, CO.*
