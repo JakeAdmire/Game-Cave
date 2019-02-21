@@ -14,11 +14,7 @@ Credit for the project goes to team members:
                 
 ## Screenshots of Project
 
-  ![image description](https://media.giphy.com/media/4Hglls7TycXipHrywn/source.mp4)
-  
-  ![image description](image link)
-  
-  ![image description](image link)
+ ![demo](https://user-images.githubusercontent.com/23123990/53147491-f41c2e00-3564-11e9-855a-c4bb272f36a0.gif)
 
 ## Specific things we learned:
 DEVIN TYPE SOME INFO ABOUT WHAT THIS SNIPPET IS AND WHY IT'S IMPORTANT
