@@ -12,7 +12,7 @@ export default class SearchBar extends Component {
   render() {
     return(
       <div className="search-bar search-section">
-        <input maxLength="25" placeholder="Search a game title!" className="search" onChange={this.updateText}/>
+        <input maxLength="25" placeholder="SEARCH..." className="search" onChange={this.updateText}/>
       </div>
     )
   }
