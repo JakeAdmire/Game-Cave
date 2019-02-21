@@ -1,4 +1,5 @@
-##User Feedback:##
+##User Feedback:
+
 *Liz, Jess, Duy:
 - Text is hard to read
 - What does "+" button does
