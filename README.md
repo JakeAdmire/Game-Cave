@@ -14,7 +14,7 @@ Credit for the project goes to team members:
                 
 ## Screenshots of Project
 
-  ![image description](<div style="width:100%;height:0;padding-bottom:59%;position:relative;"><iframe src="https://giphy.com/embed/4Hglls7TycXipHrywn" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/react-videogames-frontend-dev-4Hglls7TycXipHrywn">via GIPHY</a></p>)
+  ![image description](https://media.giphy.com/media/4Hglls7TycXipHrywn/source.mp4)
   
   ![image description](image link)
   
