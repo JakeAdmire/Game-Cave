@@ -25,7 +25,7 @@ Credit for the project goes to team members:
  ![presentation](https://user-images.githubusercontent.com/23123990/53151649-f97f7580-3570-11e9-90f8-62d905cce6cd.gif)
 
 ## Specific things we learned:
-DEVIN TYPE SOME INFO ABOUT WHAT THIS SNIPPET IS AND WHY IT'S IMPORTANT
+Using keys from our data in component state allowed us to keep functionality dynamic with bracket notation.
 ```
   filterByKey = (games, key) => {
     return games.filter(val => {
@@ -35,7 +35,13 @@ DEVIN TYPE SOME INFO ABOUT WHAT THIS SNIPPET IS AND WHY IT'S IMPORTANT
 ```
 ## Challenges we faced:
 #### Member One:
-"Devin Challenge" --Devin
+"Learning to use React and Jest/Enzyme while still building the app we wanted was a difficult learning curve. Testing became easier after getting a grasp on React and understanding when and how to use mock data." --Devin
+```
+		const event1 = {
+			target: { classList: ['genresToFilter'],
+				id: 'Action',
+				checked: true}}
+```
 #### Member Two:
 "The most frustrating challenge that I came across was trying to get a onBlur event to trigger on a form without
 knowing about the "tabindex" HTML attribute. Now I know that "tabindex" indicates whether or not an element can be focused,
@@ -62,7 +68,19 @@ render () {
 ```
 ## Project "Wins"
 #### Member One:
-"Devin Win" --Devin
+"Learning about and using component lifecycle methods was both a challenge and very rewarding." --Devin
+```
+  componentDidUpdate = (prevProps) => {
+    if (prevProps !== this.props) {
+    this.setState({
+      titleFilter: this.props.titleFilter,
+      genres: this.props.genresToFilter,
+      platforms: this.props.platformsToFilter,
+      isLucky: this.props.isLucky,
+      isMulti: this.props.multiplayerToggle
+    })
+  }
+```
 #### Member Two:
 "I personally feel a great deal more confident working with React and making components that speak to eachother. 'Data-Down, Actions-Up' and the idea of passing methods back and forth was at first a bizarre concept that I couldn't grasp, but now I fully understand it and am capable of working with it" --Jake
 #### Member Three:
