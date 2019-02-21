@@ -35,14 +35,11 @@ export default class GameCard extends Component {
     const style = { backgroundImage: 'url(' + this.props.img + ')', backgroundSize: 'cover' };
     return(
       <div className="game-card">
-        <section className="img">
+        <section className="img" onClick={this.toggleInfo}>
           <div className="gamecover" style={style}></div>
         </section>
-        <section className="text-container">
+        <section className="text-container" onClick={this.toggleInfo}>
           <h4>{this.props.title}</h4>
-          <p className="game-more" onClick={this.toggleInfo}>
-            More Info..
-          </p>
         </section>
         <section className="btn">
           <button onClick={this.changeLibraryStatus} className={libraryButtonClass}>{inLibraryStatus}</button>
