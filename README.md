@@ -63,6 +63,13 @@ These are extensions that we plan to implement at some point in the future:
 
 [Enzyme](https://airbnb.io/enzyme/) & [Jest](https://airbnb.io/enzyme/docs/guides/jest.html)
 
+## Member Documentation
+["Define the Relationship" / Workflow](https://github.com/JakeAdmire/game-shelf/blob/master/Resources/Notes/Dtr-Workflow.md)
+
+[Mission Statement](https://github.com/JakeAdmire/game-shelf/blob/master/Resources/Notes/Mission.md)
+
+[User Stories](https://github.com/JakeAdmire/game-shelf/blob/master/Resources/Notes/User-Stories.md)
+
 ## Credits
 Credit for this project goes to [Devin Kapla](https://github.com/DekayHaHa), [Jake Admire](https://github.com/JakeAdmire), and [Justin Pyktel](https://github.com/SiimonStark)
 
