@@ -1,5 +1,6 @@
 ## GameCave
 GameCave is a React web application that allows a user to search through a database of videogames and/or randomly generate a suggested game to play. 
+
 You can learn more about the assignment spec by following [this link.](http://frontend.turing.io/projects/whateverly.html)
 
 ## Contact Info
@@ -8,11 +9,11 @@ Credit for the project goes to team members:
               [Email](mailto:DevinKapla@gamil.com)  
 - Jacob Admire: [GitHub](https://github.com/JakeAdmire), 
                 [Email](mailto:JakeAdmire1@gmail.com)
-- Justin Pyktel [GitHub](https://github.com/SiimonStark), 
+- Justin Pyktel: [GitHub](https://github.com/SiimonStark), 
                 [Email](mailto:SiimonStark@gmail.com)
 
 ## Specific things we learned:
-"Devin Learned.." --Devin 
+DEVIN TYPE SOME INFO ABOUT WHAT THIS SNIPPET IS AND WHY IT'S IMPORTANT
 ```
   filterByKey = (games, key) => {
     return games.filter(val => {
@@ -20,20 +21,17 @@ Credit for the project goes to team members:
     })
   } 
 ```
-"Jake Learned.." --Jake
-
-
-"Justin Learned.." --Justin
-
-## Challenges we faced
+## Challenges we faced:
+#### Member One:
 "Devin Challenge" --Devin
-
+#### Member Two:
 "The most frustrating challenge that I came across was trying to get a onBlur event to trigger on a form without
 knowing about the "tabindex" HTML attribute. Now I know that "tabindex" indicates whether or not an element can be focused,
 and thus whether or not it can be affected by onBlur." --Jake
 ```
     <form onBlur={this.focusLost} tabIndex="0" className={hidePlatforms}>
 ```
+#### Member Three:
 "Justin Challenge" --Justin
 ## Project "Wins"
 "Devin Win" --Devin
@@ -63,5 +61,6 @@ These are extensions that we plan to implement at some point in the future:
 ## Credits
 Credit for this project goes to Devin Kapla, Jake Admire, and Justin Pyktel
 
+---
 This project was assigned by Brittany Storoz, Pamela Lovett, and Robbie Jaeger 
-@ Turing School of Software and Design, Denver, CO.
+*@ Turing School of Software and Design, Denver, CO.*
