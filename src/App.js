@@ -27,8 +27,11 @@ export default class App extends Component {
         })
       })
       .then(() => this.getFilters('platforms'))
-      .then(() => this.getFilters('genres'))
-      .then(() => fetch('http://whateverly-datasets.herokuapp.com/api/v1/genres1811'))
+			.then(() => this.getFilters('genres'))
+			.catch(error => {
+				throw new Error(error)
+			})
+      fetch('http://whateverly-datasets.herokuapp.com/api/v1/genres1811')
       .then(response => response.json())
       .then(genres => {
         this.setState({

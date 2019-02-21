@@ -8,18 +8,15 @@ export default class Popup extends Component {
       genreData: []
     };
   }
-
   closePopup = () => {
     this.props.setPopup( false );
   }
-
   getGenreDescript = () => {
     let allGenres = this.props.mainGenres.filter(ea => {
       return this.props.currentGenres.includes(ea.genre);
     });
     this.setState({genreData: allGenres, showGenre: true})
   }
-
   render() {
     const styleImg = { backgroundImage: 'url(' + this.props.currentImage + ')', backgroundSize: 'cover',  };
     if(this.state.showGenre) {
