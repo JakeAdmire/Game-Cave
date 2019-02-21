@@ -6,9 +6,11 @@ You can learn more about the assignment spec by following [this link.](http://fr
 ## Contact Info
 Credit for the project goes to team members:
 - Devin Kapla: [GitHub](https://github.com/DekayHaHa),
-              [Email](mailto:DevinKapla@gamil.com)  
+              [Email](mailto:DevinKapla@gamil.com),
+              [LinkedIn](https://www.linkedin.com/in/devin-kapla/)
 - Jacob Admire: [GitHub](https://github.com/JakeAdmire), 
-                [Email](mailto:JakeAdmire1@gmail.com)
+                [Email](mailto:JakeAdmire1@gmail.com),
+                [LinkedIn](https://www.linkedin.com/in/jakeadmire/)
 - Justin Pyktel: [GitHub](https://github.com/SiimonStark), 
                 [Email](mailto:SiimonStark@gmail.com),
                 [LinkedIn](https://www.linkedin.com/in/justinpyktel/),
