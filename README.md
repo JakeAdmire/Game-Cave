@@ -10,7 +10,9 @@ Credit for the project goes to team members:
 - Jacob Admire: [GitHub](https://github.com/JakeAdmire), 
                 [Email](mailto:JakeAdmire1@gmail.com)
 - Justin Pyktel: [GitHub](https://github.com/SiimonStark), 
-                [Email](mailto:SiimonStark@gmail.com)
+                [Email](mailto:SiimonStark@gmail.com),
+                [LinkedIn](https://www.linkedin.com/in/justinpyktel/),
+                [Twitter](https://twitter.com/SiimonStark)
                 
 ## Screenshots of Project
 
