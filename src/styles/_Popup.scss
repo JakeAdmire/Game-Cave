@@ -64,6 +64,7 @@
 }
 
 .popup-text {
+  padding-right: 15px;
   display: flex;
   flex-direction: column;
   h4 {
@@ -141,16 +142,20 @@
 }
 
 #genre {
+  .scroll {
+    overflow-x: scroll;
+    height: 96%;
+  }
   padding: 62px 15px 0 15px;
   flex-wrap: wrap;
   div {
     h3 {
       margin: 0;
-      @include font(#fff, 14px, 600);
+      @include font(#fff, 24px, 600);
     }
     p {
-      margin: 0;
-      @include font($cyan, 12px, 400);
+      margin: 0 0 22px 0;
+      @include font($cyan, 18px, 400);
     }
   }
   .showGame {
