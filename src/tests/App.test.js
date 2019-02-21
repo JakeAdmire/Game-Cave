@@ -102,17 +102,8 @@ describe('App', () => {
 		}
 		wrapper.instance().updateChecks(event1)
 		wrapper.instance().updateChecks(event2)
-		expect(wrapper.state()).toEqual({
-			games: [],
-			genres: [],
-			genresToFilter: ['Action'],
-			mainGenres: [],
-			multiplayerToggle: null,
-			platforms: [],
-			platformsToFilter: ['Playsation 4'],
-			titleFilter: '',
-			isLucky: false
-		})
+		expect(wrapper.state('genresToFilter')).toEqual(['Action'])
+		expect(wrapper.state('platformsToFilter')).toEqual(['Playsation 4'])
 	})
 
 	it ('should remove genre or platform from filters', () => {
@@ -136,17 +127,9 @@ describe('App', () => {
 		}
 		wrapper.instance().updateChecks(event1)
 		wrapper.instance().updateChecks(event2)
-		expect(wrapper.state()).toEqual({
-			games: [],
-			genres: [],
-			genresToFilter: [],
-			mainGenres: [],
-			multiplayerToggle: null,
-			platforms: [],
-			platformsToFilter: [],
-			titleFilter: '',
-			isLucky: false
-		})
+		expect(wrapper.state('genresToFilter')).toEqual([])
+		expect(wrapper.state('platformsToFilter')).toEqual([])
+		
 	})
 
 	it ('should be able to update state', () => {
