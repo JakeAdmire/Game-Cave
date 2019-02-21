@@ -6,8 +6,7 @@
   background: $screenColor;
   @include glow(4px);
   @include flexCenter();
-  @include roundedBox(
-    $neonPurple, 0, 3px, 0, 0, 50px, 50px);
+  @include roundedBox($neonPurple, 0, 3px, 0, 0, 50px, 50px);
 }
 
 .title {
@@ -15,4 +14,31 @@
   background: -webkit-linear-gradient($neonPurple, $cranberryTuesday);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.header {
+  p {
+    margin: 0;
+    position: absolute;
+    right: 10px;
+    transition: $transition;
+    @include font($cyan, 22px, 700);
+    &:hover {
+      color: #fff;
+      cursor: pointer;
+      background: hsla(218, 26%, 48%, 0.5);
+    }
+    &:active {
+      opacity: 0.5;
+    }
+  }
+  p:nth-child(2) {
+    top: 7px;
+    padding: 2px 34px 0px 5px;
+  }
+  p:last-child {
+    bottom: 7px;
+    padding: 2px 30px 0px 5px;
+    border-radius: 0 0 50px 0;
+  }
 }

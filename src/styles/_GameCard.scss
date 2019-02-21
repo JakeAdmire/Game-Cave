@@ -10,9 +10,14 @@
   transition: $transition;
 }
 
-.game-card:hover {
-  cursor: pointer;
-  @include glow(4px);
+.game-card {
+  &:hover {
+    cursor: pointer;
+    @include glow(4px);
+    h4 {
+      color: $neonPurple;
+    }
+  }
 }
 
 .img {
@@ -38,6 +43,7 @@
 .text-container h4 {
   margin: 5px;
   font-size: 18px;
+  transition: $transition;
 }
 
 .game-more {
