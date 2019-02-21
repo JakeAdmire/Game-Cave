@@ -62,14 +62,20 @@ export default class GameShelf extends Component {
 	}
 	
 	displayGames = (games) => {
-		games = games.sort((a, b) => a.title.localeCompare(b.title));
-		return games.map((game) => {
-			return (
-				<GameCard {...game}
-					setPopup={this.statePopup}
-					key={game.title} />
-			)
-		})
+    if (games.length) {
+  		games = games.sort((a, b) => a.title.localeCompare(b.title));
+  		return games.map((game) => {
+  			return (
+  				<GameCard {...game}
+  					setPopup={this.statePopup}
+  					key={game.title} />
+  			)
+  		})
+    } else {
+      return (
+        <h1 className="empty-shelf">NO RESULTS FOUND</h1>
+        )
+    }
 	}
 
   render () {

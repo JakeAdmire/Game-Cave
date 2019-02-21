@@ -14,3 +14,11 @@
   grid-auto-rows: max-content;
   color: white;
 }
+
+.empty-shelf {
+  position: absolute;
+  left: 100px; right: 100px; top: 250px;
+  text-align: center;
+  text-shadow: 0px 4px 18px black;
+  @include font($cyan, 5vw, 700);
+}
