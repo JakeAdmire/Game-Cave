@@ -11,6 +11,12 @@ Credit for the project goes to team members:
                 [Email](mailto:JakeAdmire1@gmail.com)
 - Justin Pyktel: [GitHub](https://github.com/SiimonStark), 
                 [Email](mailto:SiimonStark@gmail.com)
+                
+## Screenshots of Project
+
+  ![image description](image link)
+  ![image description](image link)
+  ![image description](image link)
 
 ## Specific things we learned:
 DEVIN TYPE SOME INFO ABOUT WHAT THIS SNIPPET IS AND WHY IT'S IMPORTANT
@@ -39,12 +45,6 @@ and thus whether or not it can be affected by onBlur." --Jake
 "I personally feel a great deal more confident working with React and making components that speak to eachother. 'Data-Down, Actions-Up' and the idea of passing methods back and forth was at first a bizarre concept that I couldn't grasp, but now I fully understand it and am capable of working with it" --Jake
 
 "Justin Win" --Justin
-
-## Screenshots of Project
-
-  ![image description](image link)
-  ![image description](image link)
-  ![image description](image link)
 
 ## Future Implementation Plans
 These are extensions that we plan to implement at some point in the future:
