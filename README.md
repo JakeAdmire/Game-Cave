@@ -1,17 +1,18 @@
-## GameShelf
-Project description here  
+## GameCave
+GameCave is a React web application that allows a user to search through a database of videogames and/or randomly generate a suggested game to play. 
 You can learn more about the assignment spec by following [this link.](http://frontend.turing.io/projects/whateverly.html)
 
 ## Contact Info
 Credit for the project goes to team members:
-- Devin Kapla: [GitHub](https://github.com/DekayHaHa)
+- Devin Kapla: [GitHub](https://github.com/DekayHaHa),
               [Email](mailto:DevinKapla@gamil.com)  
-- Jacob Admire: [GitHub](https://github.com/JakeAdmire) 
+- Jacob Admire: [GitHub](https://github.com/JakeAdmire), 
                 [Email](mailto:JakeAdmire1@gmail.com)
-- Justin Pyktel ()
+- Justin Pyktel [GitHub](https://github.com/SiimonStark), 
+                [Email](mailto:SiimonStark@gmail.com)
 
-## What was learned?
-What was learned 1 
+## Specific things we learned:
+"Devin Learned.." --Devin 
 ```
   filterByKey = (games, key) => {
     return games.filter(val => {
@@ -19,15 +20,27 @@ What was learned 1
     })
   } 
 ```
-What was learned 2 
+"Jake Learned.." --Jake
 
-    code example 2
+
+"Justin Learned.." --Justin
 
 ## Challenges we faced
-Challenges we faced
+"Devin Challenge" --Devin
 
+"The most frustrating challenge that I came across was trying to get a onBlur event to trigger on a form without
+knowing about the "tabindex" HTML attribute. Now I know that "tabindex" indicates whether or not an element can be focused,
+and thus whether or not it can be affected by onBlur." --Jake
+```
+    <form onBlur={this.focusLost} tabIndex="0" className={hidePlatforms}>
+```
+"Justin Challenge" --Justin
 ## Project "Wins"
-Project wins
+"Devin Win" --Devin
+
+"I personally feel a great deal more confident working with React and making components that speak to eachother. 'Data-Down, Actions-Up' and the idea of passing methods back and forth was at first a bizarre concept that I couldn't grasp, but now I fully understand it and am capable of working with it" --Jake
+
+"Justin Win" --Justin
 
 ## Screenshots of Project
 
@@ -36,14 +49,19 @@ Project wins
   ![image description](image link)
 
 ## Future Implementation Plans
-Small checklist of items we'd like to implement
-- Item 1
-- Item 2
-- Item 3
+These are extensions that we plan to implement at some point in the future:
+- A local storage system to keep track of each user's selected library of games
+- The functionality to swap between a user's individual library, and the entire library of games
 
 ## Tools Used to Build Project
 [Sublime Text Editor](https://www.sublimetext.com/)
-etc.
+[VSCode]
+[React]
+[Enzyme]
+[Jest]
 
 ## Credits
-Us.
+Credit for this project goes to Devin Kapla, Jake Admire, and Justin Pyktel
+
+This project was assigned by Brittany Storoz, Pamela Lovett, and Robbie Jaeger 
+@ Turing School of Software and Design, Denver, CO.
