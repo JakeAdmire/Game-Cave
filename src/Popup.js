@@ -4,7 +4,7 @@ export default class Popup extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showGenres: false,
+      showGenre: false,
       genreData: []
     };
   }

@@ -14,7 +14,7 @@ describe('SearchBar', () => {
     );
   });
 
-  it('should match snapshop', () => {
+  it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 

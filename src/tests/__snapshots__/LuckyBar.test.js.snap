@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LuckyBar should match snapshop 1`] = `
+exports[`LuckyBar should match snapshot 1`] = `
 <div
   className="lucky-bar search-section"
 >

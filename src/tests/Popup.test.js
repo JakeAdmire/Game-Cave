@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import Popup from '../Popup';
 import { shallow } from 'enzyme';
 
+const statePopupMock = jest.fn();
+
 const mockProps = {
   popup: false,
   currentTitle: 'Skyrim',
@@ -36,18 +38,30 @@ describe('Popup', () => {
     wrapper = shallow(
       <Popup {...mockProps}
               popupState={popupStateMock}
-              mainGenres={mockGenres}/>
+              mainGenres={mockGenres}
+              setPopup={statePopupMock}/>
     );
   });
 
-  it('should match snapshop', () => {
+  it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
   it('should have default state', () => {
     expect(wrapper.state()).toEqual({
-      showGenres: false,
+      showGenre: false,
       genreData: []
     });
+  })
+
+  it('should update genredata when button is clicked', () => {
+    expect(wrapper.state('showGenre')).toEqual(false);
+    wrapper.find('.showGenre').simulate('click');
+    expect(wrapper.state('showGenre')).toEqual(true);
+  })
+
+  it('should invoke setPopup on button click', () => {
+    wrapper.find('.close').simulate('click');
+    expect(statePopupMock).toBeCalled();
   })
 })
