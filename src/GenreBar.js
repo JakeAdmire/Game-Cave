@@ -10,10 +10,10 @@ export default class GenreBar extends Component {
         this.setState({ mouseIn: this.state.mouseIn ? false : true });
     }
     focusLost = () => {
-        this.setState({ showGenres: this.state.mouseIn ? true : false })
+        this.setState({ showGenres: this.state.mouseIn ? true : false });
     }
     toggleGenres = () => {
-        this.setState({ showGenres: this.state.showGenres ? false : true })
+        this.setState({ showGenres: this.state.showGenres ? false : true });
     }
     render() {
         let hideGenres = this.state.showGenres ? "genre-check" : "genre-check hide";

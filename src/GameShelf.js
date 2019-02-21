@@ -31,7 +31,7 @@ export default class GameShelf extends Component {
         currentTitle: title,
         popup: popup
       }
-    )
+    );
   }
   componentDidUpdate = (prevProps) => {
     if (prevProps !== this.props) {
@@ -41,20 +41,20 @@ export default class GameShelf extends Component {
       platforms: this.props.platformsToFilter,
       isLucky: this.props.isLucky,
       isMulti: this.props.multiplayerToggle
-    })
+    });
   }
 }
   filterGamesTitle = (games) => {
-    return games.filter(game => game.title.toLowerCase().includes(this.state.titleFilter))
+    return games.filter(game => game.title.toLowerCase().includes(this.state.titleFilter));
   }
 
   filterByKey = (games, key) => {
     return games.filter(val => {
-        return this.state[key].every(elem => val[key].includes(elem))
+        return this.state[key].every(elem => val[key].includes(elem));
     })
   } 
   filterByMulti = (games) => {
-    return games.filter(game => game.multiplayer === this.state.isMulti)
+    return games.filter(game => game.multiplayer === this.state.isMulti);
   }
   shuffle = (games) => {
     let randoArr = games.sort(() => 0.5 - Math.random());
@@ -69,8 +69,8 @@ export default class GameShelf extends Component {
   				<GameCard {...game}
   					setPopup={this.statePopup}
   					key={game.title} />
-  			)
-  		})
+  			);
+  		});
     } else {
       return (
         <h1 className="empty-shelf">NO RESULTS FOUND</h1>
@@ -84,8 +84,8 @@ export default class GameShelf extends Component {
     games = this.state.titleFilter ? this.filterGamesTitle(games) : games;
     games = this.state.genres.length ? this.filterByKey(games, 'genres') : games;
     games = this.state.platforms.length ? this.filterByKey(games, 'platforms') : games;
-    games = this.state.isLucky && games.length ? this.shuffle(games) : games;
     games = this.state.isMulti !== null ? this.filterByMulti(games) : games;
+    games = this.state.isLucky && games.length ? this.shuffle(games) : games;
 
     const popupOverlay = 
       (this.state.popup && <Popup {...this.state}
