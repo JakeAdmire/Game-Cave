@@ -85,6 +85,8 @@ These are extensions that we plan to implement at some point in the future:
 
 [User Stories](https://github.com/JakeAdmire/game-shelf/blob/master/Resources/Notes/User-Stories.md)
 
+[User Feedback](https://github.com/JakeAdmire/game-shelf/blob/master/Resources/Notes/User_Feedback.md)
+
 ## Credits
 Credit for this project goes to [Devin Kapla](https://github.com/DekayHaHa), [Jake Admire](https://github.com/JakeAdmire), and [Justin Pyktel](https://github.com/SiimonStark)
 
