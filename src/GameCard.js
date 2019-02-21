@@ -26,20 +26,12 @@ export default class GameCard extends Component {
     )
   }
   changeLibraryStatus = () => {
-    if (this.state.inLibrary) {
-      this.setState({ inLibrary: false });
-    } else {
-      this.setState({ inLibrary: true });
-    }
+    this.setState({ inLibrary: this.state.inLibrary ? false : true });
   }
   render() {
     let libraryButtonClass = "add-to-library " + this.state.inLibrary;
     let inLibraryStatus = " + ";
-    if (this.state.inLibrary) {
-      inLibraryStatus = " - ";
-    } else {
-      inLibraryStatus = " + ";
-    }
+    inLibraryStatus = this.state.inLibrary ? " - " : " + ";
     const style = { backgroundImage: 'url(' + this.props.img + ')', backgroundSize: 'cover' };
     return(
       <div className="game-card">
