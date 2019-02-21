@@ -27,14 +27,17 @@ export default class Popup extends Component {
         <div className="popup-overlay">
           <div id="genre" className="popup">
             <button className="close" onClick={this.closePopup}>X</button>
-            {this.state.genreData.map(genre => {
-              return (
-                <div className="genre-info">
-                  <h3>{genre.genre}</h3>
-                  <p>{genre.description}</p>
-                </div>) 
+            <button className="showGame" onClick={() => {this.setState({showGenre: false})}}>Show Game</button>
+            <div className="scroll">
+              {this.state.genreData.map(genre => {
+                return (
+                  <div className="genre-info">
+                    <h3>{genre.genre}</h3>
+                    <p>{genre.description}</p>
+                  </div>
+                ) 
               })}
-              <button className="showGame" onClick={() => {this.setState({showGenre: false})}}>Show Game</button>
+            </div>
           </div>
         </div>
       )

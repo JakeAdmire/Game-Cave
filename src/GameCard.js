@@ -25,31 +25,20 @@ export default class GameCard extends Component {
     )
   }
   changeLibraryStatus = () => {
-    if (this.state.inLibrary) {
-      this.setState({ inLibrary: false });
-    } else {
-      this.setState({ inLibrary: true });
-    }
+    this.setState({ inLibrary: this.state.inLibrary ? false : true });
   }
   render() {
     let libraryButtonClass = "add-to-library " + this.state.inLibrary;
     let inLibraryStatus = " + ";
-    if (this.state.inLibrary) {
-      inLibraryStatus = " - ";
-    } else {
-      inLibraryStatus = " + ";
-    }
+    inLibraryStatus = this.state.inLibrary ? " - " : " + ";
     const style = { backgroundImage: 'url(' + this.props.img + ')', backgroundSize: 'cover' };
     return(
       <div className="game-card">
-        <section className="img">
+        <section className="img" onClick={this.toggleInfo}>
           <div className="gamecover" style={style}></div>
         </section>
-        <section className="text-container">
+        <section className="text-container" onClick={this.toggleInfo}>
           <h4>{this.props.title}</h4>
-          <p className="game-more" onClick={this.toggleInfo}>
-            More Info..
-          </p>
         </section>
         <section className="btn">
           <button onClick={this.changeLibraryStatus} className={libraryButtonClass}>{inLibraryStatus}</button>

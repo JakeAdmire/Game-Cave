@@ -61,10 +61,20 @@ export default class App extends Component {
   updateState = (newState) => {
     this.setState(newState);
   }
+  clearState = () => {
+    this.setState({
+      genresToFilter: [],
+      mainGenres: [],
+      multiplayerToggle: null,
+      platformsToFilter: [],
+      titleFilter: '',
+      isLucky: false
+      })
+  }
   render() {
     return (
       <div className="app">
-        <Header />
+        <Header resetState={this.clearState}/>
         <GameShelf {...this.state} />
         <Footer {...this.state}
           updateChecks={this.updateChecks}
