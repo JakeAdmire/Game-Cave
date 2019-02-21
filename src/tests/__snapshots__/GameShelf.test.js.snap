@@ -41,7 +41,7 @@ exports[`GameShelf should match snapshot 1`] = `
       img="https://upload.wikimedia.org/wikipedia/en/thumb/5/50/Super_Smash_Bros._Ultimate.jpg/220px-Super_Smash_Bros._Ultimate.jpg"
       key="Super Smash Bros. Ultimate"
       metaScore={93}
-      multiplayer={true}
+      multiplayer={false}
       platforms={
         Array [
           "Switch",
@@ -64,7 +64,6 @@ exports[`GameShelf should match snapshot 1`] = `
       multiplayer={false}
       platforms={
         Array [
-          "PC",
           "Playstation 4",
           "Xbox One",
         ]
@@ -83,7 +82,7 @@ exports[`GameShelf should match snapshot 1`] = `
       img="https://i.ebayimg.com/images/g/ZX4AAOSw1vlUrlTm/s-l300.jpg"
       key="The Last of Us"
       metaScore={95}
-      multiplayer={true}
+      multiplayer={false}
       platforms={
         Array [
           "Playstation 3",
