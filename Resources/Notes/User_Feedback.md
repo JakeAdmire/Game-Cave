@@ -1,6 +1,8 @@
-##User Feedback:
 
-*Liz, Jess, Duy:
+## User Feedback
+
+## Liz, Jess, Duy:
+
 - Text is hard to read
 - What does "+" button does
 - No results found
@@ -12,7 +14,9 @@
 - Padding on gameCard Popup
 - Get rid of "more info", (clicking just the card) would less busy
 - Cool Background
-*Sally
+
+## Sally
+
 - What does it do at first glance
 - Font is hard to adjust to
 - How to use multiplayer, at first glance
