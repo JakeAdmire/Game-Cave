@@ -10,7 +10,7 @@ describe('Footer', () => {
       <Footer />
     );
   });
-  it('should match snapshop', () => {
+  it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 })

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Popup should match snapshop 1`] = `
+exports[`Popup should match snapshot 1`] = `
 <div
   className="popup-overlay"
 >
@@ -13,83 +13,67 @@ exports[`Popup should match snapshop 1`] = `
     >
       X
     </button>
-    <div
-      className="popup-img-container"
-    >
-      <section
-        className="popup-img"
-        style={
-          Object {
-            "backgroundImage": "url(https://i.ebayimg.com/images/g/ZX4AAOSw1vlUrlTm/s-l300.jpg)",
-            "backgroundSize": "cover",
-          }
+    <section
+      className="popup-img"
+      style={
+        Object {
+          "backgroundImage": "url(https://i.ebayimg.com/images/g/ZX4AAOSw1vlUrlTm/s-l300.jpg)",
+          "backgroundSize": "cover",
         }
-      />
-    </div>
+      }
+    />
     <article
-      className="popup-text-container"
+      className="popup-text"
     >
       <h3
         className="popup-title"
       >
-        Game Title:
-        <span
-          className="value"
-        >
-           
-          Skyrim
-        </span>
+        SKYRIM
       </h3>
       <h4
         className="popup-score"
       >
-        MetaCritic Score:
-        <span
-          className="value"
-        >
-           
+        <p>
+          MetaCritic
+        </p>
+        <p>
           99
-        </span>
-      </h4>
-      <h4
-        className="popup-multi"
-      >
-        Multiplayer:
-        <span
-          className="value"
-        >
-           
-          false
-        </span>
-      </h4>
-      <h4
-        className="popup-plat"
-      >
-        Available On:
-        <span
-          className="value"
-        >
-           
-          PC - Switch
-        </span>
+        </p>
+        <p>
+          SCORE
+        </p>
       </h4>
       <h4
         className="popup-genre"
       >
-        Genres:
-        <span
-          className="value genre"
-        >
-           
-          Adventure - Action
-        </span>
+        Adventure, Action
       </h4>
       <button
         className="showGenre"
         onClick={[Function]}
       >
-        Show Genre Details
+        Show Genre Info..
       </button>
+      <h4
+        className="popup-plat"
+      >
+        <p>
+          Available On:
+        </p>
+        <p>
+          PC, Switch
+        </p>
+      </h4>
+      <h4
+        className="popup-multi"
+      >
+        <p>
+          Multiplayer:
+        </p>
+        <p>
+          FALSE
+        </p>
+      </h4>
     </article>
   </div>
 </div>

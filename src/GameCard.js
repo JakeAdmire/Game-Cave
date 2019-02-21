@@ -14,7 +14,6 @@ export default class GameCard extends Component {
      }
   }
   toggleInfo = () => {
-    console.log(this.state.gameTitle)
     this.props.setPopup(
       true,
       this.state.gameTitle,

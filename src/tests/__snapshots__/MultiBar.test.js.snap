@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MultiBar should match snapshop 1`] = `
+exports[`MultiBar should match snapshot 1`] = `
 <div
   className="multi-bar search-section"
 >
