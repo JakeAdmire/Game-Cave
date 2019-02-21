@@ -40,10 +40,22 @@ and thus whether or not it can be affected by onBlur." --Jake
     <form onBlur={this.focusLost} tabIndex="0" className={hidePlatforms}>
 ```
 #### Member Three:
+"Learning and understanding how to condintionally render, using OOP, with React. Was at the same time, challenging and rewarding! Being able to manipulate the page in such away makes me all the more confident in my ability to build larger scale projects." --Justin
+```
+render () {
+    let games = this.props.games;
 
-<img width="726" alt="screen shot 2019-02-21 at 12 42 09 am" src="https://user-images.githubusercontent.com/23123990/53151982-a4902f00-3571-11e9-8ab4-8bd7d69e5d71.png">
+    games = this.state.titleFilter ? this.filterGamesTitle(games) : games;
+    games = this.state.genres.length ? this.filterByKey(games, 'genres') : games;
+    games = this.state.platforms.length ? this.filterByKey(games, 'platforms') : games;
+    games = this.state.isLucky && games.length ? this.shuffle(games) : games;
+    games = this.state.isMulti !== null ? this.filterByMulti(games) : games;
 
-"Justin Challenge" --Justin
+    const popupOverlay = 
+      (this.state.popup && <Popup {...this.state}
+        mainGenres={this.props.mainGenres}
+        setPopup={this.statePopup}/> )
+```
 ## Project "Wins"
 #### Member One:
 "Devin Win" --Devin
