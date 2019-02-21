@@ -42,10 +42,11 @@ and thus whether or not it can be affected by onBlur." --Jake
 #### Member Three:
 "Justin Challenge" --Justin
 ## Project "Wins"
+#### Member One:
 "Devin Win" --Devin
-
+#### Member Two:
 "I personally feel a great deal more confident working with React and making components that speak to eachother. 'Data-Down, Actions-Up' and the idea of passing methods back and forth was at first a bizarre concept that I couldn't grasp, but now I fully understand it and am capable of working with it" --Jake
-
+#### Member Three:
 "Justin Win" --Justin
 
 ## Future Implementation Plans
@@ -63,7 +64,7 @@ These are extensions that we plan to implement at some point in the future:
 [Enzyme](https://airbnb.io/enzyme/) & [Jest](https://airbnb.io/enzyme/docs/guides/jest.html)
 
 ## Credits
-Credit for this project goes to Devin Kapla, Jake Admire, and Justin Pyktel
+Credit for this project goes to [Devin Kapla](https://github.com/DekayHaHa), [Jake Admire](https://github.com/JakeAdmire), and [Justin Pyktel](https://github.com/SiimonStark)
 
 ---
 This project was assigned by Brittany Storoz, Pamela Lovett, and Robbie Jaeger 
