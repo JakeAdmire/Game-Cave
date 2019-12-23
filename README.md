@@ -5,9 +5,6 @@
   <h1 align="center">Game Cave</h1>
   <p align="center">
     Have too many video games and you can't decide what to play? That's no longer a problem with <b>Game Cave</b>, which randomly selects a video game suggestion with optional filters!
-    <br />
-    <br />
-    <b><a href="https://jakeadmire.github.io/Foto-Finder">View Demo</a></b>
   </p>
 </p>
 <div align="center">
@@ -84,6 +81,7 @@ The intended assignment was to learn the basics of ReactJS with a focus on the c
 ---
 
 This project was assigned by Brittany Storoz, Pamela Lovett, and Robert Jaeger
+
 _@ Turing School of Software & Design, Denver, CO._
 
 ---
